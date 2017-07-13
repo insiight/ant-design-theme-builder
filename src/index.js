@@ -1,17 +1,12 @@
 import React from 'react';
 import ReactDom from 'react-dom';
-import { Router, useRouterHistory } from 'react-router';
-import createHistory from 'history/lib/createBrowserHistory';
+import { Router, hashHistory } from 'react-router';
 
 // ---- routes ----
 import routes from './route';
 
 // ---- others ----
 import AppContainer from './comp.Main';
-
-let history = useRouterHistory(createHistory)({
-  basename: document.head.baseURI,
-});
 
 const rootRoute = Object.assign(routes, {
   path: '/',
@@ -22,6 +17,6 @@ const rootRoute = Object.assign(routes, {
 });
 
 ReactDom.render(
-  <Router history={history} routes={rootRoute} />,
+  <Router history={hashHistory} routes={rootRoute} />,
   document.querySelector('#root')
 );

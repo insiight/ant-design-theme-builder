@@ -1,10 +1,8 @@
 import path from 'path';
 import fs from 'fs';
-const ANTD_SRC_PATH = path.resolve(__dirname, 'ant-design');
+const SRC_PATH = path.resolve(__dirname, '../src');
+const ANTD_SRC_PATH = path.resolve(__dirname, '../ant-design');
 const ANTD_COMPONENTS_PATH = path.resolve(ANTD_SRC_PATH, 'components');
-const SRC_PATH = path.resolve(__dirname, 'src');
-const DEMO_ENTRY_TEMPLATE_PATH = path.resolve(__dirname, 'demoEntry.tmp.js');
-const DEMO_ENTRY_TEMPLATE = fs.readFileSync(DEMO_ENTRY_TEMPLATE_PATH).toString();
 
 const EX_JS = /````jsx\n([\n\d\D]*?)````/g;
 const EX_CSS = /````css\n([\n\d\D]*?)````/g;

@@ -1,8 +1,9 @@
 var path = require('path');
 var webpack = require('webpack');
 var HtmlWebpackPlugin = require('html-webpack-plugin');
-var buildPath = path.resolve(__dirname, 'dist');
+var buildPath = path.resolve(__dirname, 'docs');
 var srcPath = path.resolve(__dirname, 'src');
+var IS_PRODUCTION = process.env.NODE_ENV === 'production';
 
 var webpackConfig = {
   entry: {
@@ -53,6 +54,7 @@ var webpackConfig = {
       template: 'src/index.ejs',
       filename: 'index.html',
       chunks: ['index'],
+      lessHost: IS_PRODUCTION ? '' : '//localhost:8888/node_modules',
     }),
   ],
   resolve: {
@@ -61,7 +63,20 @@ var webpackConfig = {
       srcPath,
     ],
   },
-  devtool: 'source-map',
+  devtool: 'eval',
 };
+
+if (IS_PRODUCTION) {
+  webpackConfig.plugins.push(
+    new webpack.optimize.UglifyJsPlugin({
+      compress: {
+        warnings: false,
+      },
+      output: {
+        comments: false,
+      },
+    }),
+  );
+}
 
 module.exports = webpackConfig;
