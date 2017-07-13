@@ -1,11 +1,19 @@
+import './index.css';
+import React from 'react';
+import { InputNumber } from 'antd';
 
-      import React from 'react';
-      import './demo0.css';
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+function onChange(value) {
+  console.log('changed', value);
+}
+
+export default function DemoComponent_input_number_size() {
+return(
+  <div>
+    <InputNumber size="large" min={1} max={100000} defaultValue={3} onChange={onChange} />
+    <InputNumber min={1} max={100000} defaultValue={3} onChange={onChange} />
+    <InputNumber size="small" min={1} max={100000} defaultValue={3} onChange={onChange} />
+  </div>
+);
+};
+
+export const demo = <DemoComponent_input_number_size key="DemoComponent_input_number_size" />;

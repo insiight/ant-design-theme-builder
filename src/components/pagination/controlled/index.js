@@ -1,11 +1,23 @@
+import React from 'react';
+import { Pagination } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+class App extends React.Component {
+  state = {
+    current: 3,
+  }
+  onChange = (page) => {
+    console.log(page);
+    this.setState({
+      current: page,
+    });
+  }
+  render() {
+    return <Pagination current={this.state.current} onChange={this.onChange} total={50} />;
+  }
+}
+
+export default function DemoComponent_pagination_controlled() {
+return(<App />);
+};
+
+export const demo = <DemoComponent_pagination_controlled key="DemoComponent_pagination_controlled" />;

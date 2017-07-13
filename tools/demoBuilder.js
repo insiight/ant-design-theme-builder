@@ -11,7 +11,9 @@ function extraCodeFromTrunk(mdString, ex) {
   const results = [];
   let ret = null;
   while (ret = ex.exec(mdString)) {
-    results.push(ret[1]);
+    if (ret[1].trim()) {
+      results.push(ret[1]);
+    }
   }
 
   return results;
@@ -71,14 +73,10 @@ fs.writeFileSync(path.resolve(SRC_PATH, 'components.json'), JSON.stringify(compo
 function createComponentRoute(compDemoInfos) {
   let childRoutes = '[';
   compDemoInfos.forEach(compInfo => {
-    compInfo.demos.forEach(demoInfo => {
-      if (demoInfo.jsCodes.length) {
-        childRoutes += `\n{
-          path: '/${compInfo.name}/${demoInfo.name}',
-          component: require('./components/${compInfo.name}/${demoInfo.name}').default,
-        },`;
-      }
-    });
+    childRoutes += `\n{
+      path: '/${compInfo.name}',
+      component: require('./components/${compInfo.name}').default,
+    },`;
   });
   childRoutes += ']';
   return `export default {
@@ -93,26 +91,13 @@ function createDemoFiles(parentPath, demoInfo) {
   }
 
   if (demoInfo.jsCodes.length > 0) {
-    demoInfo.jsCodes.forEach((code, index) => {
-      fs.writeFileSync(path.resolve(demoPath, 'demo' + index + '.js'), code);
-    });
-
-    demoInfo.cssCodes.forEach((code, index) => {
-      fs.writeFileSync(path.resolve(demoPath, 'demo' + index + '.css'), code);
-    });
-
+    let jsCode = demoInfo.jsCodes[0];
+    if (demoInfo.cssCodes.length > 0) {
+      fs.writeFileSync(path.resolve(demoPath, 'index.css'), demoInfo.cssCodes[0]);
+      jsCode = "import './index.css';\n" + jsCode;
+    }
+    fs.writeFileSync(path.resolve(demoPath, 'index.js'), jsCode);
     fs.writeFileSync(path.resolve(demoPath, 'index.md'), demoInfo.content);
-    fs.writeFileSync(path.resolve(demoPath, 'index.js'), `
-      import React from 'react';
-      ${demoInfo.cssCodes.length ? `import './demo0.css';` : ''}
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    `);
   }
 }
 
@@ -124,6 +109,28 @@ function createComponentFiles(parentPath, compInfo) {
   compInfo.demos.forEach(demo => {
     createDemoFiles(compPath, demo);
   });
+  const demoModules = compInfo.demos
+    .filter(demoInfo => demoInfo.jsCodes.length > 0)
+    .map(demoInfo => {
+      return `import Demo_${demoInfo.name} from './${demoInfo.name}';`;
+    }).join('\n');
+  const demoComps = compInfo.demos
+    .filter(demoInfo => demoInfo.jsCodes.length > 0)
+    .map(demoInfo => {
+      return `<Card><Demo_${demoInfo.name} /></Card>`;
+    }).join('\n');
+
+  fs.writeFileSync(path.resolve(compPath, 'index.js'), `
+    import React from 'react';
+    import { Card } from 'antd';
+    ${demoModules}
+    
+    export default function Demo() {
+      return (<div>
+        ${demoComps || 'no demos'}
+      </div>);
+    }
+  `);
 }
 
 function createFiles(srcPath, compInfos) {

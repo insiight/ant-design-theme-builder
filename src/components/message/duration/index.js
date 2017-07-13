@@ -1,11 +1,14 @@
+import React from 'react';
+import { message, Button } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+const success = () => {
+  message.success('This is a prompt message for success, and it will disappear in 10 seconds', 10);
+};
+
+export default function DemoComponent_message_duration() {
+return(
+  <Button onClick={success}>Customized display duration</Button>
+);
+};
+
+export const demo = <DemoComponent_message_duration key="DemoComponent_message_duration" />;

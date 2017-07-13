@@ -1,11 +1,14 @@
+import React from 'react';
+import { Switch } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+export default function DemoComponent_switch_size() {
+return(
+  <div>
+    <Switch />
+    <br />
+    <Switch size="small" />
+  </div>
+);
+};
+
+export const demo = <DemoComponent_switch_size key="DemoComponent_switch_size" />;

@@ -1,11 +1,22 @@
+import React from 'react';
+import { Card, Col, Row } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+export default function DemoComponent_card_in_column() {
+return(
+  <div style={{ background: '#ECECEC', padding: '30px' }}>
+    <Row gutter={16}>
+      <Col span={8}>
+        <Card title="Card title" bordered={false}>Card content</Card>
+      </Col>
+      <Col span={8}>
+        <Card title="Card title" bordered={false}>Card content</Card>
+      </Col>
+      <Col span={8}>
+        <Card title="Card title" bordered={false}>Card content</Card>
+      </Col>
+    </Row>
+  </div>
+);
+};
+
+export const demo = <DemoComponent_card_in_column key="DemoComponent_card_in_column" />;

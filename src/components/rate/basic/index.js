@@ -1,11 +1,8 @@
+import React from 'react';
+import { Rate } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+export default function DemoComponent_rate_basic() {
+return(<Rate />);
+};
+
+export const demo = <DemoComponent_rate_basic key="DemoComponent_rate_basic" />;

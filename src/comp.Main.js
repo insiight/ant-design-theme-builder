@@ -1,9 +1,8 @@
 import React from 'react';
 import { Link } from 'react-router';
-import { Layout, Menu, Input } from 'antd';
+import { Layout, Menu } from 'antd';
 import ThemeBuilder from './themeBuilder';
 const { Sider, Content } = Layout;
-const SubMenu = Menu.SubMenu;
 import components from './components.json';
 
 export default function Main(props) {
@@ -15,11 +14,7 @@ export default function Main(props) {
           theme="dark">
           {components.map(comp => {
             if (comp.demos.length) {
-              return <SubMenu key={comp.name} title={comp.name}>
-                {comp.demos.map(demo => {
-                  return <Menu.Item key={`${comp.name}-${demo.name}`}><Link to={`/${comp.name}/${demo.name}`}>{demo.name}</Link></Menu.Item>;
-                })}
-              </SubMenu>;
+              return <Menu.Item key={comp.name}><Link to={`/${comp.name}`}>{comp.name}</Link></Menu.Item>
             }
             return null;
           })}

@@ -1,11 +1,14 @@
+import React from 'react';
+import { Calendar } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+function onPanelChange(value, mode) {
+  console.log(value, mode);
+}
+
+export default function DemoComponent_calendar_basic() {
+return(
+  <Calendar onPanelChange={onPanelChange} />
+);
+};
+
+export const demo = <DemoComponent_calendar_basic key="DemoComponent_calendar_basic" />;

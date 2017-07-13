@@ -1,11 +1,17 @@
+import './index.css';
+import React from 'react';
+import { BackTop } from 'antd';
 
-      import React from 'react';
-      import './demo0.css';
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+export default function DemoComponent_back_top_custom() {
+return(
+  <div>
+    <BackTop>
+      <div className="ant-back-top-inner">UP</div>
+    </BackTop>
+    Scroll down to see the bottom-right
+    <strong style={{ color: '#1088e9' }}> blue </strong>
+    button.
+  </div>);
+};
+
+export const demo = <DemoComponent_back_top_custom key="DemoComponent_back_top_custom" />;

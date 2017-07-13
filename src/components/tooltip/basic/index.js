@@ -1,11 +1,12 @@
+import React from 'react';
+import { Tooltip } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+export default function DemoComponent_tooltip_basic() {
+return(
+  <Tooltip title="prompt text">
+    <span>Tooltip will show when mouse enter.</span>
+  </Tooltip>
+);
+};
+
+export const demo = <DemoComponent_tooltip_basic key="DemoComponent_tooltip_basic" />;

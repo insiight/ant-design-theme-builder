@@ -1,11 +1,10 @@
+import React from 'react';
+import { Pagination } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+export default function DemoComponent_pagination_simple() {
+return(
+  <Pagination simple defaultCurrent={2} total={50} />
+);
+};
+
+export const demo = <DemoComponent_pagination_simple key="DemoComponent_pagination_simple" />;

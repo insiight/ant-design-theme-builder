@@ -1,11 +1,14 @@
+import React from 'react';
+import { Checkbox } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+function onChange(e) {
+  console.log(`checked = ${e.target.checked}`);
+}
+
+export default function DemoComponent_checkbox_basic() {
+return(
+  <Checkbox onChange={onChange}>Checkbox</Checkbox>
+);
+};
+
+export const demo = <DemoComponent_checkbox_basic key="DemoComponent_checkbox_basic" />;

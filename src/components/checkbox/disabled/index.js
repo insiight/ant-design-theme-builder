@@ -1,11 +1,14 @@
+import React from 'react';
+import { Checkbox } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+export default function DemoComponent_checkbox_disabled() {
+return(
+  <div>
+    <Checkbox defaultChecked={false} disabled />
+    <br />
+    <Checkbox defaultChecked disabled />
+  </div>
+  );
+};
+
+export const demo = <DemoComponent_checkbox_disabled key="DemoComponent_checkbox_disabled" />;

@@ -1,11 +1,14 @@
+import React from 'react';
+import { Progress } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+export default function DemoComponent_progress_circle() {
+return(
+  <div>
+    <Progress type="circle" percent={75} />
+    <Progress type="circle" percent={70} status="exception" />
+    <Progress type="circle" percent={100} />
+  </div>
+);
+};
+
+export const demo = <DemoComponent_progress_circle key="DemoComponent_progress_circle" />;

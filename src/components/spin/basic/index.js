@@ -1,11 +1,8 @@
+import React from 'react';
+import { Spin } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+export default function DemoComponent_spin_basic() {
+return(<Spin />);
+};
+
+export const demo = <DemoComponent_spin_basic key="DemoComponent_spin_basic" />;

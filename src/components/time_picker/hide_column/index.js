@@ -1,11 +1,13 @@
+import React from 'react';
+import { TimePicker } from 'antd';
+import moment from 'moment';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+const format = 'HH:mm';
+
+export default function DemoComponent_time_picker_hide_column() {
+return(
+  <TimePicker defaultValue={moment('12:08', format)} format={format} />
+);
+};
+
+export const demo = <DemoComponent_time_picker_hide_column key="DemoComponent_time_picker_hide_column" />;

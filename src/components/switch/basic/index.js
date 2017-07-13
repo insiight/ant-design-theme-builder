@@ -1,11 +1,13 @@
+import React from 'react';
+import { Switch } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+function onChange(checked) {
+  console.log(`switch to ${checked}`);
+}
+
+export default function DemoComponent_switch_basic() {
+return(
+  <Switch defaultChecked={false} onChange={onChange} />);
+};
+
+export const demo = <DemoComponent_switch_basic key="DemoComponent_switch_basic" />;

@@ -1,11 +1,27 @@
+import React from 'react';
+import { Collapse } from 'antd';
+const Panel = Collapse.Panel;
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+const text = `
+  A dog is a type of domesticated animal.
+  Known for its loyalty and faithfulness,
+  it can be found as a welcome guest in many households across the world.
+`;
+
+export default function DemoComponent_collapse_accordion() {
+return(
+  <Collapse accordion>
+    <Panel header={'This is panel header 1'} key="1">
+      <p>{text}</p>
+    </Panel>
+    <Panel header={'This is panel header 2'} key="2">
+      <p>{text}</p>
+    </Panel>
+    <Panel header={'This is panel header 3'} key="3">
+      <p>{text}</p>
+    </Panel>
+  </Collapse>
+);
+};
+
+export const demo = <DemoComponent_collapse_accordion key="DemoComponent_collapse_accordion" />;

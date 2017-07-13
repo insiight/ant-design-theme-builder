@@ -1,11 +1,14 @@
+import React from 'react';
+import { message, Button } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+const info = () => {
+  message.info('This is a normal message');
+};
+
+export default function DemoComponent_message_info() {
+return(
+  <Button type="primary" onClick={info}>Display normal message</Button>
+);
+};
+
+export const demo = <DemoComponent_message_info key="DemoComponent_message_info" />;

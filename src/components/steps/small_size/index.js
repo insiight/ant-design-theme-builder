@@ -1,11 +1,15 @@
+import React from 'react';
+import { Steps } from 'antd';
+const Step = Steps.Step;
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+export default function DemoComponent_steps_small_size() {
+return(
+  <Steps size="small" current={1}>
+    <Step title="Finished" />
+    <Step title="In Progress" />
+    <Step title="Waiting" />
+  </Steps>
+);
+};
+
+export const demo = <DemoComponent_steps_small_size key="DemoComponent_steps_small_size" />;

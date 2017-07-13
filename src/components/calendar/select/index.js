@@ -1,11 +1,34 @@
+import React from 'react';
+import { Calendar, Alert } from 'antd';
+import moment from 'moment';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+class App extends React.Component {
+  state = {
+    value: moment('2017-01-25'),
+    selectedValue: moment('2017-01-25'),
+  }
+  onSelect = (value) => {
+    this.setState({
+      value,
+      selectedValue: value,
+    });
+  }
+  onPanelChange = (value) => {
+    this.setState({ value });
+  }
+  render() {
+    const { value, selectedValue } = this.state;
+    return (
+      <div>
+        <Alert message={`You selected date: ${selectedValue && selectedValue.format('YYYY-MM-DD')}`} />
+        <Calendar value={value} onSelect={this.onSelect} onPanelChange={this.onPanelChange} />
+      </div>
+    );
+  }
+}
+
+export default function DemoComponent_calendar_select() {
+return(<App />);
+};
+
+export const demo = <DemoComponent_calendar_select key="DemoComponent_calendar_select" />;

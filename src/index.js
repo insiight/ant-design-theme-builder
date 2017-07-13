@@ -12,7 +12,7 @@ const rootRoute = Object.assign(routes, {
   path: '/',
   component: AppContainer,
   indexRoute: {
-    onEnter: (nextState, replace) => replace('/button/basic'),
+    onEnter: (nextState, replace) => replace('/button'),
   },
 });
 

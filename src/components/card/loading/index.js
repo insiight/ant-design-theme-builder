@@ -1,11 +1,12 @@
+import React from 'react';
+import { Card } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+export default function DemoComponent_card_loading() {
+return(
+  <Card loading title="Card title" style={{ width: '34%' }}>
+    Whatever content
+  </Card>
+);
+};
+
+export const demo = <DemoComponent_card_loading key="DemoComponent_card_loading" />;

@@ -1,11 +1,14 @@
+import React from 'react';
+import { BackTop } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+export default function DemoComponent_back_top_basic() {
+return(
+  <div>
+    <BackTop />
+    Scroll down to see the bottom-right
+    <strong style={{ color: 'rgba(64, 64, 64, 0.6)' }}> gray </strong>
+    button.
+  </div>);
+};
+
+export const demo = <DemoComponent_back_top_basic key="DemoComponent_back_top_basic" />;

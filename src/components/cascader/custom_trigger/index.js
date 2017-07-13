@@ -1,11 +1,47 @@
+import React from 'react';
+import { Cascader } from 'antd';
 
-      import React from 'react';
-      
-      import Component from './demo0';
-      
-      export default function Demo() {
-        return (<div>
-          <Component />
-        </div>);
-      }
-    
+const options = [{
+  value: 'zhejiang',
+  label: 'Zhejiang',
+  children: [{
+    value: 'hangzhou',
+    label: 'Hangzhou',
+  }],
+}, {
+  value: 'jiangsu',
+  label: 'Jiangsu',
+  children: [{
+    value: 'nanjing',
+    label: 'Nanjing',
+  }],
+}];
+
+class CitySwitcher extends React.Component {
+  state = {
+    text: 'Unselect',
+  };
+
+  onChange = (value, selectedOptions) => {
+    this.setState({
+      text: selectedOptions.map(o => o.label).join(', '),
+    });
+  }
+  render() {
+    return (
+      <span>
+        {this.state.text}
+        &nbsp;
+        <Cascader options={options} onChange={this.onChange}>
+          <a href="#">Change city</a>
+        </Cascader>
+      </span>
+    );
+  }
+}
+
+export default function DemoComponent_cascader_custom_trigger() {
+return(<CitySwitcher />);
+};
+
+export const demo = <DemoComponent_cascader_custom_trigger key="DemoComponent_cascader_custom_trigger" />;
