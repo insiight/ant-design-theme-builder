@@ -54,7 +54,7 @@ var webpackConfig = {
       template: 'src/index.ejs',
       filename: 'index.html',
       chunks: ['index'],
-      lessHost: IS_PRODUCTION ? '' : '//localhost:8888/node_modules',
+      lessHost: IS_PRODUCTION ? '' : '//localhost:8888/node_modules/',
     }),
   ],
   resolve: {
