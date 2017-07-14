@@ -51,8 +51,8 @@ class ThemeBuilder extends React.Component {
         <FormItem>
           <Input.Search
             placeholder="search variables"
-            onSearch={value => {
-              this.setState({ search: value });
+            onChange={e => {
+              this.setState({ search: e.target.value });
             }}
           />
           <Button type="primary" htmlType="submit" style={{ width: '100%', marginTop: 10 }}>Update</Button>
