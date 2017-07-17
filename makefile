@@ -27,6 +27,9 @@ build-less:
 build-demo: deps-node
 	./node_modules/.bin/babel tools/demoBuilder.js -o tools/demoBuilder.es6.js && node tools/demoBuilder.es6.js && rm tools/demoBuilder.es6.js
 
+px-to-rem:
+	./node_modules/.bin/babel tools/lessPXToREM.js -o tools/lessPXToREM.es6.js && node tools/lessPXToREM.es6.js && rm tools/lessPXToREM.es6.js
+
 ################################################################################
 # Node
 

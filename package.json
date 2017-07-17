@@ -4,7 +4,8 @@
   "description": "This project provide a static page for ant design theme preview and generate theme file",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "postinstall": "make px-to-rem"
   },
   "repository": {
     "type": "git",
