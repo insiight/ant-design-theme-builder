@@ -5,7 +5,7 @@
 // card style
 .@{tab-prefix-cls} {
   &&-card > &-bar &-nav-container {
-    height: 32px;
+    height: (3.2 * @unit);
   }
   &&-card > &-bar &-ink-bar {
     visibility: hidden;
@@ -17,17 +17,17 @@
     border-radius: @border-radius-base @border-radius-base 0 0;
     transition: all 0.3s @ease-in-out;
     background: @tabs-card-head-background;
-    margin-right: 2px;
+    margin-right: (0.2 * @unit);
   }
   &&-card > &-bar &-tab {
-    padding: 5px 16px 4px;
+    padding: (0.5 * @unit) (1.6 * @unit) (0.4 * @unit);
     transition: all 0.3s @ease-in-out;
   }
   &&-card > &-bar &-tab-active {
     background: @component-background;
     border-color: @border-color-base;
     color: @primary-color;
-    padding-bottom: 5px;
+    padding-bottom: (0.5 * @unit);
   }
   &&-card > &-bar &-tab-inactive {
     padding: 0;
@@ -38,18 +38,18 @@
   &&-card > &-bar &-tab .@{iconfont-css-prefix}-close {
     color: @text-color-secondary;
     transition: all .3s;
-    .iconfont-size-under-12px(10px);
+    .iconfont-size-under-12px((1 * @unit));
     margin-right: 0;
     opacity: 0;
     position: absolute;
-    right: 2px;
+    right: (0.2 * @unit);
     top: 50%;
-    margin-top: -5px;
+    margin-top: -(0.5 * @unit);
     overflow: hidden;
     text-align: center;
-    border-radius: 2px;
-    width: 14px;
-    height: 14px;
+    border-radius: (0.2 * @unit);
+    width: (1.4 * @unit);
+    height: (1.4 * @unit);
     line-height: 1;
     &:hover {
       color: @heading-color;
@@ -70,18 +70,18 @@
 
   &-extra-content {
     float: right;
-    line-height: 32px;
+    line-height: (3.2 * @unit);
 
     .@{tab-prefix-cls}-new-tab {
-      width: 20px;
-      height: 20px;
-      line-height: 20px;
+      width: (2 * @unit);
+      height: (2 * @unit);
+      line-height: (2 * @unit);
       text-align: center;
       cursor: pointer;
       border-radius: @border-radius-base;
       border: @border-width-base @border-style-base @border-color-base;
       font-size: @font-size-base;
-      .iconfont-size-under-12px(10px);
+      .iconfont-size-under-12px((1 * @unit));
       color: @text-color-secondary;
       transition: color 0.3s ease;
       &:hover {
@@ -97,12 +97,12 @@
     }
     .@{tab-prefix-cls}-tab {
       border-bottom: @border-width-base @border-style-base @border-color-base;
-      margin-bottom: 8px;
+      margin-bottom: (0.8 * @unit);
       &-active {
-        padding-bottom: 4px;
+        padding-bottom: (0.4 * @unit);
       }
       &:last-child {
-        margin-bottom: 8px;
+        margin-bottom: (0.8 * @unit);
       }
     }
   }
@@ -114,10 +114,10 @@
     .@{tab-prefix-cls}-tab {
       border-right: 0;
       border-radius: @border-radius-base 0 0 @border-radius-base;
-      margin-right: 1px;
+      margin-right: (0.1 * @unit);
       &-active {
-        margin-right: -1px;
-        padding-right: 18px;
+        margin-right: -(0.1 * @unit);
+        padding-right: (1.8 * @unit);
       }
     }
   }
@@ -129,10 +129,10 @@
     .@{tab-prefix-cls}-tab {
       border-left: 0;
       border-radius: 0 @border-radius-base @border-radius-base 0;
-      margin-left: 1px;
+      margin-left: (0.1 * @unit);
       &-active {
-        margin-left: -1px;
-        padding-left: 18px;
+        margin-left: -(0.1 * @unit);
+        padding-left: (1.8 * @unit);
       }
     }
   }

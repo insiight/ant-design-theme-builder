@@ -15,7 +15,7 @@
       &:before {
         content: ' ';
         position: relative;
-        width: 2px;
+        width: (0.2 * @unit);
         height: 100%;
         display: block;
         background-color: @border-color-split;
@@ -24,10 +24,10 @@
       &-ball {
         display: none;
         position: absolute;
-        width: 9px;
-        height: 9px;
-        border-radius: 9px;
-        border: 3px solid @primary-color;
+        width: (0.9 * @unit);
+        height: (0.9 * @unit);
+        border-radius: (0.9 * @unit);
+        border: (0.3 * @unit) solid @primary-color;
         background-color: @component-background;
         left: 50%;
         transition: top .3s ease-in-out;
@@ -44,12 +44,12 @@
   }
 
   &-anchor-link {
-    padding: 8px 0 8px 18px;
+    padding: (0.8 * @unit) 0 (0.8 * @unit) (1.8 * @unit);
     line-height: 1;
 
     & & {
-      padding-top: 6px;
-      padding-bottom: 6px;
+      padding-top: (0.6 * @unit);
+      padding-bottom: (0.6 * @unit);
     }
 
     &-title {
@@ -60,7 +60,7 @@
       white-space: nowrap;
       overflow: hidden;
       text-overflow: ellipsis;
-      margin-bottom: 8px;
+      margin-bottom: (0.8 * @unit);
     }
 
     &-title:only-child {

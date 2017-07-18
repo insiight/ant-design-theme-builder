@@ -20,12 +20,12 @@
     color: #fff;
     line-height: @badge-height;
     text-align: center;
-    padding: 0 6px;
+    padding: 0 (0.6 * @unit);
     font-size: @font-size-base;
     white-space: nowrap;
     transform-origin: -10% center;
     font-family: tahoma;
-    box-shadow: 0 0 0 1px #fff;
+    box-shadow: 0 0 0 (0.1 * @unit) #fff;
     a,
     a:hover {
       color: #fff;
@@ -42,7 +42,7 @@
     border-radius: 100%;
     background: @highlight-color;
     z-index: 10;
-    box-shadow: 0 0 0 1px #fff;
+    box-shadow: 0 0 0 (0.1 * @unit) #fff;
   }
 
   &-status {
@@ -50,8 +50,8 @@
     vertical-align: baseline;
 
     &-dot {
-      width: 8px;
-      height: 8px;
+      width: (0.8 * @unit);
+      height: (0.8 * @unit);
       display: inline-block;
       border-radius: 50%;
     }
@@ -68,7 +68,7 @@
         width: 100%;
         height: 100%;
         border-radius: 50%;
-        border: 1px solid @primary-color;
+        border: (0.1 * @unit) solid @primary-color;
         content: '';
         animation: antStatusProcessing 1.2s infinite ease-in-out;
       }
@@ -85,7 +85,7 @@
     &-text {
       color: @text-color;
       font-size: @font-size-base;
-      margin-left: 8px;
+      margin-left: (0.8 * @unit);
     }
   }
 

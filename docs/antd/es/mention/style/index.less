@@ -33,26 +33,26 @@
       white-space: pre-wrap;
       word-wrap: break-word;
       height: auto;
-      padding: 4px 7px;
+      padding: (0.4 * @unit) (0.7 * @unit);
     }
   }
   .DraftEditor-editorContainer .public-DraftEditor-content {
     height: auto;
-    padding: 4px 7px;
+    padding: (0.4 * @unit) (0.7 * @unit);
   }
 }
 
 .@{mention-prefix-cls}-dropdown {
   margin-top: 1.5em;
-  max-height: 250px;
-  min-width: 120px;
+  max-height: (25 * @unit);
+  min-width: (12 * @unit);
   background-color: @component-background;
   box-shadow: @box-shadow-base;
   border-radius: @border-radius-base;
   box-sizing: border-box;
   z-index: @zindex-dropdown;
-  left: -9999px;
-  top: -9999px;
+  left: -(999.9 * @unit);
+  top: -(999.9 * @unit);
   position: absolute;
   outline: none;
   overflow-x: hidden;
@@ -70,7 +70,7 @@
   &-item {
     position: relative;
     display: block;
-    padding: 7px 8px;
+    padding: (0.7 * @unit) (0.8 * @unit);
     font-weight: normal;
     color: @text-color;
     white-space: nowrap;
@@ -109,8 +109,8 @@
     }
 
     &-divider {
-      height: 1px;
-      margin: 1px 0;
+      height: (0.1 * @unit);
+      margin: (0.1 * @unit) 0;
       overflow: hidden;
       background-color: @border-color-split;
       line-height: 0;

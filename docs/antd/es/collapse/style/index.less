@@ -7,10 +7,10 @@
 @collapse-active-bg: @background-color-active;
 
 .collapse-close() {
-  .iconfont-size-under-12px(9px, 0);
+  .iconfont-size-under-12px((0.9 * @unit), 0);
 }
 .collapse-open() {
-  .iconfont-size-under-12px(9px, 90deg);
+  .iconfont-size-under-12px((0.9 * @unit), 90deg);
 }
 
 .@{collapse-prefix-cls} {
@@ -22,9 +22,9 @@
   & > &-item {
     border-bottom: @border-width-base @border-style-base @border-color-base;
     > .@{collapse-prefix-cls}-header {
-      height: 38px;
-      line-height: 38px;
-      padding-left: 32px;
+      height: (3.8 * @unit);
+      line-height: (3.8 * @unit);
+      padding-left: (3.2 * @unit);
       color: @heading-color;
       cursor: pointer;
       position: relative;
@@ -37,13 +37,13 @@
         color: @text-color-secondary;
         display: inline-block;
         font-weight: bold;
-        line-height: 40px;
+        line-height: (4 * @unit);
         vertical-align: middle;
         transition: transform 0.24s;
         top: 0;
-        left: 16px;
+        left: (1.6 * @unit);
         /* stylelint-disable declaration-block-no-duplicate-properties */
-        top: ~"16px \9";
+        top: ~"(1.6 * @unit) \9";
         left: ~"0 \9";
         /* stylelint-enable declaration-block-no-duplicate-properties */
         &:before {
@@ -60,12 +60,12 @@
   &-content {
     overflow: hidden;
     color: @text-color;
-    padding: 0 16px;
+    padding: 0 (1.6 * @unit);
     background-color: @component-background;
 
     & > &-box {
-      padding-top: 16px;
-      padding-bottom: 16px;
+      padding-top: (1.6 * @unit);
+      padding-bottom: (1.6 * @unit);
     }
 
     &-inactive {

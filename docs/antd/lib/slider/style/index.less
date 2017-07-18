@@ -7,35 +7,35 @@
 // tooltip
 @slider-tooltip-color: #fff;
 @slider-tooltip-bg: tint(@text-color, 4%);
-@slider-tooltip-arrow-width: 4px;
-@slider-tooltip-distance: @slider-tooltip-arrow-width + 4;
+@slider-tooltip-arrow-width: (0.4 * @unit);
+@slider-tooltip-distance: @slider-tooltip-arrow-width + (0.4 * @unit);
 @slider-tooltip-arrow-color: @slider-tooltip-bg;
 
 .@{slider-prefix-cls} {
   position: relative;
-  margin: 10px 6px;
-  padding: 4px 0;
-  height: 12px;
+  margin: (1 * @unit) (0.6 * @unit);
+  padding: (0.4 * @unit) 0;
+  height: (1.2 * @unit);
   cursor: pointer;
 
   .vertical();
 
   &-with-marks {
-    margin-bottom: 28px;
+    margin-bottom: (2.8 * @unit);
   }
 
   &-rail {
     position: absolute;
     width: 100%;
-    height: 4px;
-    border-radius: 2px;
+    height: (0.4 * @unit);
+    border-radius: (0.2 * @unit);
     background-color: @border-color-split;
     transition: background-color 0.3s ease;
   }
 
   &-track {
     position: absolute;
-    height: 4px;
+    height: (0.4 * @unit);
     border-radius: @border-radius-base;
     background-color: tint(@primary-color, 60%);
     transition: background-color 0.3s ease;
@@ -43,13 +43,13 @@
 
   &-handle {
     position: absolute;
-    margin-left: -7px;
-    margin-top: -5px;
-    width: 14px;
-    height: 14px;
+    margin-left: -(0.7 * @unit);
+    margin-top: -(0.5 * @unit);
+    width: (1.4 * @unit);
+    height: (1.4 * @unit);
     cursor: pointer;
     border-radius: 50%;
-    border: solid 2px tint(@primary-color, 50%);
+    border: solid (0.2 * @unit) tint(@primary-color, 50%);
     background-color: @component-background;
     transition: border-color 0.3s ease, transform .3s cubic-bezier(0.18, 0.89, 0.32, 1.28);
 
@@ -60,7 +60,7 @@
     }
 
     &:active {
-      box-shadow: 0 0 0 2px fadeout(@primary-color, 80%);
+      box-shadow: 0 0 0 (0.2 * @unit) fadeout(@primary-color, 80%);
     }
   }
 
@@ -78,7 +78,7 @@
 
   &-mark {
     position: absolute;
-    top: 14px;
+    top: (1.4 * @unit);
     left: 0;
     width: 100%;
     font-size: @font-size-base;
@@ -100,26 +100,26 @@
   &-step {
     position: absolute;
     width: 100%;
-    height: 4px;
+    height: (0.4 * @unit);
     background: transparent;
   }
 
   &-dot {
     position: absolute;
-    top: -2px;
-    margin-left: -4px;
-    width: 8px;
-    height: 8px;
-    border: 2px solid @border-color-split;
+    top: -(0.2 * @unit);
+    margin-left: -(0.4 * @unit);
+    width: (0.8 * @unit);
+    height: (0.8 * @unit);
+    border: (0.2 * @unit) solid @border-color-split;
     background-color: @component-background;
     cursor: pointer;
     border-radius: 50%;
     vertical-align: middle;
     &:first-child {
-      margin-left: -4px;
+      margin-left: -(0.4 * @unit);
     }
     &:last-child {
-      margin-left: -4px;
+      margin-left: -(0.4 * @unit);
     }
     &-active {
       border-color: tint(@primary-color, 50%);
@@ -150,46 +150,46 @@
 
 .vertical() {
   &-vertical {
-    width: 12px;
+    width: (1.2 * @unit);
     height: 100%;
-    margin: 6px 10px;
-    padding: 0 4px;
+    margin: (0.6 * @unit) (1 * @unit);
+    padding: 0 (0.4 * @unit);
 
     .@{slider-prefix-cls}-rail {
       height: 100%;
-      width: 4px;
+      width: (0.4 * @unit);
     }
 
     .@{slider-prefix-cls}-track {
-      width: 4px;
+      width: (0.4 * @unit);
     }
 
     .@{slider-prefix-cls}-handle {
-      margin-left: -5px;
-      margin-bottom: -7px;
+      margin-left: -(0.5 * @unit);
+      margin-bottom: -(0.7 * @unit);
     }
 
     .@{slider-prefix-cls}-mark {
       top: 0;
-      left: 12px;
-      width: 18px;
+      left: (1.2 * @unit);
+      width: (1.8 * @unit);
       height: 100%;
     }
 
     .@{slider-prefix-cls}-mark-text {
-      left: 4px;
+      left: (0.4 * @unit);
       white-space: nowrap;
     }
 
     .@{slider-prefix-cls}-step {
-      width: 4px;
+      width: (0.4 * @unit);
       height: 100%;
     }
 
     .@{slider-prefix-cls}-dot {
       top: auto;
-      left: 2px;
-      margin-bottom: -4px;
+      left: (0.2 * @unit);
+      margin-bottom: -(0.4 * @unit);
     }
   }
 }

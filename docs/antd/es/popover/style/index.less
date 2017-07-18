@@ -61,38 +61,38 @@
   &-title {
     min-width: @popover-min-width;
     margin: 0; // reset heading margin
-    padding: 0 16px;
-    line-height: 32px;
-    height: 32px;
-    border-bottom: 1px solid @border-color-split;
+    padding: 0 (1.6 * @unit);
+    line-height: (3.2 * @unit);
+    height: (3.2 * @unit);
+    border-bottom: (0.1 * @unit) solid @border-color-split;
     color: @popover-color;
     font-weight: 500;
   }
 
   &-inner-content {
-    padding: 8px 16px;
+    padding: (0.8 * @unit) (1.6 * @unit);
     color: @popover-color;
   }
 
   &-message {
-    padding: 8px 0 16px;
+    padding: (0.8 * @unit) 0 (1.6 * @unit);
     font-size: @font-size-base;
     color: @popover-color;
     > .@{iconfont-css-prefix} {
       color: @warning-color;
-      line-height: 17px;
+      line-height: (1.7 * @unit);
       position: absolute;
     }
     &-title {
-      padding-left: 20px;
+      padding-left: (2 * @unit);
     }
   }
 
   &-buttons {
     text-align: right;
-    margin-bottom: 8px;
+    margin-bottom: (0.8 * @unit);
     button {
-      margin-left: 8px;
+      margin-left: (0.8 * @unit);
     }
   }
 
@@ -128,7 +128,7 @@
     bottom: @popover-distance - @popover-arrow-outer-width;
     &:after {
       content: " ";
-      bottom: 1px;
+      bottom: (0.1 * @unit);
       margin-left: -@popover-arrow-width;
       border-bottom-width: 0;
       border-top-color: @popover-arrow-color;
@@ -139,10 +139,10 @@
     margin-left: -@popover-arrow-outer-width;
   }
   &-placement-topLeft > &-content >  &-arrow {
-    left: 16px;
+    left: (1.6 * @unit);
   }
   &-placement-topRight > &-content >  &-arrow {
-    right: 16px;
+    right: (1.6 * @unit);
   }
 
   &-placement-right > &-content >  &-arrow,
@@ -153,7 +153,7 @@
     border-right-color: @popover-arrow-outer-color;
     &:after {
       content: " ";
-      left: 1px;
+      left: (0.1 * @unit);
       bottom: -@popover-arrow-width;
       border-left-width: 0;
       border-right-color: @popover-arrow-color;
@@ -164,10 +164,10 @@
     margin-top: -@popover-arrow-outer-width;
   }
   &-placement-rightTop > &-content >  &-arrow {
-    top: 12px;
+    top: (1.2 * @unit);
   }
   &-placement-rightBottom > &-content >  &-arrow {
-    bottom: 12px;
+    bottom: (1.2 * @unit);
   }
 
   &-placement-bottom > &-content >  &-arrow,
@@ -178,7 +178,7 @@
     top: @popover-distance - @popover-arrow-outer-width;
     &:after {
       content: " ";
-      top: 1px;
+      top: (0.1 * @unit);
       margin-left: -@popover-arrow-width;
       border-top-width: 0;
       border-bottom-color: @popover-arrow-color;
@@ -189,10 +189,10 @@
     margin-left: -@popover-arrow-outer-width;
   }
   &-placement-bottomLeft > &-content >  &-arrow {
-    left: 16px;
+    left: (1.6 * @unit);
   }
   &-placement-bottomRight > &-content >  &-arrow {
-    right: 16px;
+    right: (1.6 * @unit);
   }
 
   &-placement-left > &-content >  &-arrow,
@@ -203,7 +203,7 @@
     border-left-color: @popover-arrow-outer-color;
     &:after {
       content: " ";
-      right: 1px;
+      right: (0.1 * @unit);
       border-right-width: 0;
       border-left-color: @popover-arrow-color;
       bottom: -@popover-arrow-width;
@@ -214,9 +214,9 @@
     margin-top: -@popover-arrow-outer-width;
   }
   &-placement-leftTop > &-content >  &-arrow {
-    top: 12px;
+    top: (1.2 * @unit);
   }
   &-placement-leftBottom > &-content >  &-arrow {
-    bottom: 12px;
+    bottom: (1.2 * @unit);
   }
 }

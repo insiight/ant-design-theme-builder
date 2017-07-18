@@ -1,7 +1,7 @@
 @import "../../style/themes/default";
 @import "../../style/mixins/index";
 
-@input-affix-width: 17;
+@input-affix-width: (1.7 * @unit);
 
 // size mixins for input
 .input-lg() {
@@ -100,7 +100,7 @@
   }
 
   > [class*="col-"] {
-    padding-right: 8px;
+    padding-right: (0.8 * @unit);
     &:last-child {
       padding-right: 0;
     }
@@ -118,7 +118,7 @@
 
   &-addon,
   &-wrap {
-    width: 1px; // To make addon/wrap as small as possible
+    width: (0.1 * @unit); // To make addon/wrap as small as possible
     white-space: nowrap;
     vertical-align: middle;
   }
@@ -148,11 +148,11 @@
 
     // Reset Select's style in addon
     .@{ant-prefix}-select {
-      margin: -(@input-padding-vertical-base + 1) (-@input-padding-horizontal);  // lesshint spaceAroundOperator: false
+      margin: -(@input-padding-vertical-base + (0.1 * @unit)) (-@input-padding-horizontal);  // lesshint spaceAroundOperator: false
 
       .@{ant-prefix}-select-selection {
         background-color: inherit;
-        margin: -1px;
+        margin: -(0.1 * @unit);
         border: @border-width-base @border-style-base transparent;
         box-shadow: none;
       }
@@ -293,7 +293,7 @@
     & > .@{ant-prefix}-time-picker:last-child .@{ant-prefix}-time-picker-input {
       border-top-right-radius: @border-radius-base;
       border-bottom-right-radius: @border-radius-base;
-      border-right-width: 1px;
+      border-right-width: (0.1 * @unit);
     }
   }
 }

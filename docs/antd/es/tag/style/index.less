@@ -5,16 +5,16 @@
 
 .@{tag-prefix-cls} {
   display: inline-block;
-  line-height: 20px;
-  height: 22px;
-  padding: 0 8px;
+  line-height: (2 * @unit);
+  height: (2.2 * @unit);
+  padding: 0 (0.8 * @unit);
   border-radius: @border-radius-base;
   border: @border-width-base @border-style-base @border-color-split;
   background: @tag-default-bg;
   font-size: @font-size-base;
   transition: all 0.3s @ease-in-out-circ;
   opacity: 1;
-  margin-right: 8px;
+  margin-right: (0.8 * @unit);
   cursor: pointer;
   white-space: nowrap;
 
@@ -31,16 +31,16 @@
   &-text {
     a:first-child:last-child {
       display: inline-block;
-      margin: 0 -8px;
-      padding: 0 8px;
+      margin: 0 -(0.8 * @unit);
+      padding: 0 (0.8 * @unit);
     }
   }
 
   .@{iconfont-css-prefix}-cross {
-    .iconfont-size-under-12px(10px);
+    .iconfont-size-under-12px((1 * @unit));
     cursor: pointer;
     font-weight: bold;
-    margin-left: 3px;
+    margin-left: (0.3 * @unit);
     transition: all 0.3s ease;
     opacity: 0.66;
 

@@ -5,16 +5,16 @@
 .@{backtop-prefix-cls} {
   z-index: @zindex-back-top;
   position: fixed;
-  right: 100px;
-  bottom: 50px;
-  height: 40px;
-  width: 40px;
+  right: (10 * @unit);
+  bottom: (5 * @unit);
+  height: (4 * @unit);
+  width: (4 * @unit);
   cursor: pointer;
 
   &-content {
-    height: 40px;
-    width: 40px;
-    border-radius: 20px;
+    height: (4 * @unit);
+    width: (4 * @unit);
+    border-radius: (2 * @unit);
     background-color: @back-top-bg;
     color: @back-top-color;
     text-align: center;
@@ -27,7 +27,7 @@
   }
 
   &-icon {
-    font-size: 20px;
-    margin-top: 10px;
+    font-size: (2 * @unit);
+    margin-top: (1 * @unit);
   }
 }

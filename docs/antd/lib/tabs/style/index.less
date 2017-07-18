@@ -14,16 +14,16 @@
     z-index: 1;
     position: absolute;
     left: 0;
-    bottom: 1px;
+    bottom: (0.1 * @unit);
     box-sizing: border-box;
-    height: 2px;
+    height: (0.2 * @unit);
     background-color: @primary-color;
     transform-origin: 0 0;
   }
 
   &-bar {
     border-bottom: @border-width-base @border-style-base @border-color-base;
-    margin-bottom: 16px;
+    margin-bottom: (1.6 * @unit);
     outline: none;
   }
 
@@ -34,12 +34,12 @@
     box-sizing: border-box;
     position: relative;
     white-space: nowrap;
-    margin-bottom: -1px;
+    margin-bottom: -(0.1 * @unit);
     .clearfix;
 
     &-scrolling {
-      padding-left: 32px;
-      padding-right: 32px;
+      padding-left: (3.2 * @unit);
+      padding-right: (3.2 * @unit);
     }
   }
 
@@ -47,11 +47,11 @@
   &-tab-next {
     user-select: none;
     z-index: 2;
-    margin-right: -2px;
-    margin-top: 2px;
-    width: 32px;
+    margin-right: -(0.2 * @unit);
+    margin-top: (0.2 * @unit);
+    width: (3.2 * @unit);
     height: 100%;
-    line-height: 32px;
+    line-height: (3.2 * @unit);
     cursor: pointer;
     border: 0;
     background-color: transparent;
@@ -76,7 +76,7 @@
       text-align: center;
       text-transform: none;
       font-family: sans-serif;
-      .iconfont-size-under-12px(10px);
+      .iconfont-size-under-12px((1 * @unit));
 
       &:before {
         display: block;
@@ -94,7 +94,7 @@
   }
 
   &-tab-next {
-    right: 2px;
+    right: (0.2 * @unit);
 
     &-icon:before {
       content: "\e61f";
@@ -113,7 +113,7 @@
 
   &-nav-wrap {
     overflow: hidden;
-    margin-bottom: -1px;
+    margin-bottom: -(0.1 * @unit);
   }
 
   &-nav-scroll {
@@ -149,11 +149,11 @@
     .@{tab-prefix-cls}-tab {
       display: inline-block;
       height: 100%;
-      margin-right: 24px;
+      margin-right: (2.4 * @unit);
       box-sizing: border-box;
       position: relative;
 
-      padding: 8px 20px;
+      padding: (0.8 * @unit) (2 * @unit);
       transition: color 0.3s @ease-in-out;
       cursor: pointer;
       text-decoration: none;
@@ -166,9 +166,9 @@
         color: @primary-7;
       }
       .@{iconfont-css-prefix} {
-        width: 14px;
-        height: 14px;
-        margin-right: 8px;
+        width: (1.4 * @unit);
+        height: (1.4 * @unit);
+        margin-right: (0.8 * @unit);
       }
     }
 
@@ -183,7 +183,7 @@
 
   &-mini &-tab {
     margin-right: 0;
-    padding: 8px 16px;
+    padding: (0.8 * @unit) (1.6 * @unit);
   }
 
   &:not(&-vertical) {
@@ -220,9 +220,9 @@
       .@{tab-prefix-cls}-tab {
         float: none;
         margin-right: 0;
-        margin-bottom: 16px;
+        margin-bottom: (1.6 * @unit);
         display: block;
-        padding: 8px 24px;
+        padding: (0.8 * @unit) (2.4 * @unit);
 
         &:last-child {
           margin-bottom: 0;
@@ -242,7 +242,7 @@
         margin-bottom: 0;
 
         &.@{tab-prefix-cls}-nav-container-scrolling {
-          padding: 32px 0;
+          padding: (3.2 * @unit) 0;
         }
       }
 
@@ -251,7 +251,7 @@
       }
 
       .@{tab-prefix-cls}-ink-bar {
-        width: 2px;
+        width: (0.2 * @unit);
         left: auto;
         height: auto;
         top: 0;
@@ -268,7 +268,7 @@
       .@{tab-prefix-cls}-tab-next {
         width: 100%;
         bottom: 0;
-        height: 32px;
+        height: (3.2 * @unit);
         &-icon:before {
           content: "\e61d";
         }
@@ -277,7 +277,7 @@
       .@{tab-prefix-cls}-tab-prev {
         top: 0;
         width: 100%;
-        height: 32px;
+        height: (3.2 * @unit);
         &-icon:before {
           content: "\e61e";
         }
@@ -289,23 +289,23 @@
     > .@{tab-prefix-cls}-bar {
       float: left;
       border-right: @border-width-base @border-style-base @border-color-split;
-      margin-right: -1px;
+      margin-right: -(0.1 * @unit);
       margin-bottom: 0;
       .@{tab-prefix-cls}-tab {
         text-align: right;
       }
       .@{tab-prefix-cls}-nav-container {
-        margin-right: -1px;
+        margin-right: -(0.1 * @unit);
       }
       .@{tab-prefix-cls}-nav-wrap {
-        margin-right: -1px;
+        margin-right: -(0.1 * @unit);
       }
       .@{tab-prefix-cls}-ink-bar {
-        right: 1px;
+        right: (0.1 * @unit);
       }
     }
     > .@{tab-prefix-cls}-content {
-      padding-left: 24px;
+      padding-left: (2.4 * @unit);
       border-left: @border-width-base @border-style-base @border-color-split;
     }
   }
@@ -314,27 +314,27 @@
     > .@{tab-prefix-cls}-bar {
       float: right;
       border-left: @border-width-base @border-style-base @border-color-split;
-      margin-left: -1px;
+      margin-left: -(0.1 * @unit);
       margin-bottom: 0;
       .@{tab-prefix-cls}-nav-container {
-        margin-left: -1px;
+        margin-left: -(0.1 * @unit);
       }
       .@{tab-prefix-cls}-nav-wrap {
-        margin-left: -1px;
+        margin-left: -(0.1 * @unit);
       }
       .@{tab-prefix-cls}-ink-bar {
-        left: 1px;
+        left: (0.1 * @unit);
       }
     }
     > .@{tab-prefix-cls}-content {
-      padding-right: 24px;
+      padding-right: (2.4 * @unit);
       border-right: @border-width-base @border-style-base @border-color-split;
     }
   }
 
   &-bottom > &-bar {
     margin-bottom: 0;
-    margin-top: 16px;
+    margin-top: (1.6 * @unit);
   }
 }
 

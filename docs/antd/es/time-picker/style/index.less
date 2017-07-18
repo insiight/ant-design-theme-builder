@@ -21,7 +21,7 @@
     background-clip: padding-box;
     line-height: 1.5;
     overflow: hidden;
-    left: -2px;
+    left: -(0.2 * @unit);
   }
 
   &-input {
@@ -36,7 +36,7 @@
     &-wrap {
       box-sizing: border-box;
       position: relative;
-      padding: 6px;
+      padding: (0.6 * @unit);
       border-bottom: @border-width-base @border-style-base @border-color-split;
     }
 
@@ -47,14 +47,14 @@
 
   &-clear-btn {
     position: absolute;
-    right: 5px;
+    right: (0.5 * @unit);
     cursor: pointer;
     overflow: hidden;
-    width: 20px;
-    height: 20px;
+    width: (2 * @unit);
+    height: (2 * @unit);
     text-align: center;
-    line-height: 20px;
-    top: 5px;
+    line-height: (2 * @unit);
+    top: (0.5 * @unit);
     margin: 0;
   }
 
@@ -63,7 +63,7 @@
     color: @disabled-color;
     display: inline-block;
     line-height: 1;
-    width: 20px;
+    width: (2 * @unit);
     transition: color 0.3s ease;
     .iconfont-font("\e62e");
   }
@@ -84,7 +84,7 @@
     width: @time-picker-panel-column-width;
     overflow: hidden;
     position: relative; // Fix chrome weird render bug
-    max-height: 144px;
+    max-height: (14.4 * @unit);
 
     &:hover {
       overflow-y: auto;
@@ -107,7 +107,7 @@
       list-style: none;
       box-sizing: border-box;
       margin: 0;
-      padding: 0 0 120px;
+      padding: 0 0 (12 * @unit);
       width: 100%;
     }
 
@@ -115,10 +115,10 @@
       list-style: none;
       box-sizing: content-box;
       margin: 0;
-      padding: 0 0 0 8px;
+      padding: 0 0 0 (0.8 * @unit);
       width: 100%;
-      height: 24px;
-      line-height: 24px;
+      height: (2.4 * @unit);
+      line-height: (2.4 * @unit);
       text-align: left;
       cursor: pointer;
       user-select: none;
@@ -151,7 +151,7 @@
   }
 
   &-addon {
-    padding: 8px;
+    padding: (0.8 * @unit);
     border-top: @border-width-base @border-style-base @border-color-split;
   }
 
@@ -186,7 +186,7 @@
   outline: none;
   font-size: @font-size-base;
   transition: opacity 0.3s ease;
-  width: 100px;
+  width: (10 * @unit);
 
   &-input {
     .input;
@@ -208,13 +208,13 @@
     position: absolute;
     user-select: none;
     transition: all .3s @ease-in-out;
-    width: 12px;
-    height: 12px;
-    line-height: 12px;
-    right: 8px;
+    width: (1.2 * @unit);
+    height: (1.2 * @unit);
+    line-height: (1.2 * @unit);
+    right: (0.8 * @unit);
     color: @text-color-secondary;
     top: 50%;
-    margin-top: -6px;
+    margin-top: -(0.6 * @unit);
     &:after {
       content: "\e641";
       font-family: "anticon";

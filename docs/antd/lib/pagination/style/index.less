@@ -19,25 +19,25 @@
   &-total-text {
     display: inline-block;
     vertical-align: middle;
-    height: 28px;
-    line-height: 28px;
-    margin-right: 8px;
+    height: (2.8 * @unit);
+    line-height: (2.8 * @unit);
+    margin-right: (0.8 * @unit);
   }
 
   &-item {
     cursor: pointer;
     border-radius: @border-radius-base;
     user-select: none;
-    min-width: 28px;
-    height: 28px;
-    line-height: 28px;
+    min-width: (2.8 * @unit);
+    height: (2.8 * @unit);
+    line-height: (2.8 * @unit);
     text-align: center;
     list-style: none;
     display: inline-block;
     vertical-align: middle;
     border: @border-width-base @border-style-base @border-color-base;
     background-color: @component-background;
-    margin-right: 8px;
+    margin-right: (0.8 * @unit);
     font-family: Arial;
     outline: 0;
 
@@ -45,7 +45,7 @@
       text-decoration: none;
       color: @text-color;
       transition: none;
-      margin: 0 6px;
+      margin: 0 (0.6 * @unit);
     }
 
     &:focus,
@@ -82,7 +82,7 @@
     &:after {
       content: "•••";
       display: block;
-      letter-spacing: 2px;
+      letter-spacing: (0.2 * @unit);
       color: @disabled-color;
       text-align: center;
     }
@@ -91,8 +91,8 @@
     &:hover {
       &:after {
         color: @primary-color;
-        .iconfont-size-under-12px(8px);
-        letter-spacing: -1px;
+        .iconfont-size-under-12px((0.8 * @unit));
+        letter-spacing: -(0.1 * @unit);
         font-family: "anticon";
       }
     }
@@ -119,7 +119,7 @@
   &-prev,
   &-jump-prev,
   &-jump-next {
-    margin-right: 8px;
+    margin-right: (0.8 * @unit);
   }
   &-prev,
   &-next,
@@ -130,9 +130,9 @@
     color: @text-color;
     border-radius: @border-radius-base;
     list-style: none;
-    min-width: 28px;
-    height: 28px;
-    line-height: 28px;
+    min-width: (2.8 * @unit);
+    height: (2.8 * @unit);
+    line-height: (2.8 * @unit);
     text-align: center;
     transition: all .3s;
     display: inline-block;
@@ -150,10 +150,10 @@
       outline: none;
 
       &:after {
-        .iconfont-size-under-12px(8px);
+        .iconfont-size-under-12px((0.8 * @unit));
         display: block;
-        height: 26px;
-        line-height: 26px;
+        height: (2.6 * @unit);
+        line-height: (2.6 * @unit);
         font-family: "anticon";
         text-align: center;
       }
@@ -201,17 +201,17 @@
   }
 
   &-slash {
-    margin: 0 10px 0 5px;
+    margin: 0 (1 * @unit) 0 (0.5 * @unit);
   }
 
   &-options {
     display: inline-block;
     vertical-align: middle;
-    margin-left: 16px;
+    margin-left: (1.6 * @unit);
 
     &-size-changer {
       display: inline-block;
-      margin-right: 8px;
+      margin-right: (0.8 * @unit);
     }
 
     &-quick-jumper {
@@ -221,8 +221,8 @@
 
       input {
         .input;
-        margin: 0 8px;
-        width: 50px;
+        margin: 0 (0.8 * @unit);
+        width: (5 * @unit);
       }
     }
   }
@@ -230,26 +230,26 @@
   &-simple &-prev,
   &-simple &-next {
     border: 0;
-    height: 24px;
-    line-height: 24px;
+    height: (2.4 * @unit);
+    line-height: (2.4 * @unit);
     margin: 0;
-    font-size: 18px;
+    font-size: (1.8 * @unit);
   }
 
   &-simple &-simple-pager {
     display: inline-block;
     vertical-align: middle;
-    margin-right: 8px;
+    margin-right: (0.8 * @unit);
 
     input {
-      margin: 0 8px;
+      margin: 0 (0.8 * @unit);
       box-sizing: border-box;
       background-color: @component-background;
       border-radius: @border-radius-base;
       border: @border-width-base @border-style-base @border-color-base;
       outline: none;
-      padding: 5px 8px;
-      height: 24px;
+      padding: (0.5 * @unit) (0.8 * @unit);
+      height: (2.4 * @unit);
       text-align: center;
       transition: border-color .3s;
 
@@ -262,55 +262,55 @@
 
 .@{pagination-prefix-cls} {
   &.mini &-total-text {
-    height: 20px;
-    line-height: 20px;
+    height: (2 * @unit);
+    line-height: (2 * @unit);
   }
 
   &.mini &-item {
     border: 0;
     margin: 0;
-    min-width: 20px;
-    height: 20px;
-    line-height: 20px;
+    min-width: (2 * @unit);
+    height: (2 * @unit);
+    line-height: (2 * @unit);
   }
 
   &.mini &-prev,
   &.mini &-next {
     margin: 0;
-    min-width: 20px;
-    height: 20px;
-    line-height: 20px;
+    min-width: (2 * @unit);
+    height: (2 * @unit);
+    line-height: (2 * @unit);
     border: 0;
 
     a {
       &:after {
-        height: 20px;
-        line-height: 20px;
+        height: (2 * @unit);
+        line-height: (2 * @unit);
       }
     }
   }
 
   &.mini &-jump-prev,
   &.mini &-jump-next {
-    height: 20px;
-    line-height: 20px;
+    height: (2 * @unit);
+    line-height: (2 * @unit);
   }
 
   &.mini &-options {
-    margin-left: 8px;
+    margin-left: (0.8 * @unit);
     &-quick-jumper {
-      height: 20px;
-      line-height: 20px;
+      height: (2 * @unit);
+      line-height: (2 * @unit);
 
       input {
         .input-sm;
-        width: 44px;
+        width: (4.4 * @unit);
       }
     }
   }
 }
 
-@media only screen and (max-width: 1024px) {
+@media only screen and (max-width: (102.4 * @unit)) {
   .@{pagination-prefix-cls}-item {
     &-after-jump-prev,
     &-before-jump-next {

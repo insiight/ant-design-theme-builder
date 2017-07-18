@@ -15,23 +15,23 @@
     border-radius: @border-radius-base;
     vertical-align: middle;
     position: relative;
-    width: 180px;
-    height: 200px;
-    padding-top: 33px;
+    width: (18 * @unit);
+    height: (20 * @unit);
+    padding-top: (3.3 * @unit);
 
     &-with-footer {
-      padding-bottom: 33px;
+      padding-bottom: (3.3 * @unit);
     }
 
     &-search {
       &-action {
         color: @disabled-color;
         position: absolute;
-        top: 4px;
-        right: 4px;
-        bottom: 4px;
-        width: 28px;
-        line-height: 26px;
+        top: (0.4 * @unit);
+        right: (0.4 * @unit);
+        bottom: (0.4 * @unit);
+        width: (2.8 * @unit);
+        line-height: (2.6 * @unit);
         text-align: center;
         font-size: @font-size-lg;
         .@{iconfont-css-prefix} {
@@ -49,7 +49,7 @@
     }
 
     &-header {
-      padding: 7px 15px;
+      padding: (0.7 * @unit) (1.5 * @unit);
       border-radius: @border-radius-base @border-radius-base 0 0;
       background: @component-background;
       color: @text-color;
@@ -62,7 +62,7 @@
 
       &-title {
         position: absolute;
-        right: 15px;
+        right: (1.5 * @unit);
       }
     }
 
@@ -75,13 +75,13 @@
         position: absolute;
         top: 0;
         left: 0;
-        padding: 4px;
+        padding: (0.4 * @unit);
         width: 100%;
       }
     }
 
     &-body-with-search {
-      padding-top: 34px;
+      padding-top: (3.4 * @unit);
     }
 
     &-content {
@@ -95,8 +95,8 @@
         overflow: hidden;
         white-space: nowrap;
         text-overflow: ellipsis;
-        padding: 7px 15px;
-        min-height: 32px;
+        padding: (0.7 * @unit) (1.5 * @unit);
+        min-height: (3.2 * @unit);
         transition: all .3s;
       }
 
@@ -119,7 +119,7 @@
       position: absolute;
       top: 50%;
       width: 100%;
-      margin-top: -10px;
+      margin-top: -(1 * @unit);
     }
 
     &-content:empty + &-body-not-found {
@@ -139,18 +139,18 @@
   &-operation {
     display: inline-block;
     overflow: hidden;
-    margin: 0 8px;
+    margin: 0 (0.8 * @unit);
     vertical-align: middle;
 
     .@{ant-prefix}-btn {
       display: block;
 
       &:first-child {
-        margin-bottom: 4px;
+        margin-bottom: (0.4 * @unit);
       }
 
       .@{iconfont-css-prefix} {
-        .iconfont-size-under-12px(10px);
+        .iconfont-size-under-12px((1 * @unit));
       }
     }
   }

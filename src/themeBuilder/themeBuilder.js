@@ -3,7 +3,10 @@ import { Form, Input, Button, Modal } from 'antd';
 import VARIABLES from './variable';
 const FormItem = Form.Item;
 import { setLessVariables } from './less';
+const localStorage = window.localStorage;
+const STORAGE_KEY = 'THEME_VARIABLES';
 
+let userSavedVariables = JSON.parse(localStorage.getItem('STORAGE_KEY') || '{}') ;
 const defaultVariables = {};
 Object.keys(VARIABLES).forEach(key => defaultVariables[key] = VARIABLES[key].default);
 
@@ -11,21 +14,25 @@ class ThemeBuilder extends React.Component {
   state = {
     search: '',
     codeVisible: false,
-    variables: defaultVariables,
-  }
+    variables: {
+      ...defaultVariables,
+      ...userSavedVariables,
+    },
+  };
 
   handleSubmit = (e) => {
     e.preventDefault();
     this.props.form.validateFields((err, values) => {
       if (!err) {
-        console.log(values);
-        setLessVariables(values);
+        const newValues = { ...this.state.variables, ...values };
+        setLessVariables(newValues);
         this.setState({
-          variables: values,
-        })
+          variables: newValues,
+        });
+        localStorage.setItem('STORAGE_KEY', JSON.stringify(newValues));
       }
     });
-  }
+  };
 
   getCode() {
     const newVariables = this.state.variables;
@@ -42,6 +49,10 @@ class ThemeBuilder extends React.Component {
     });
 
     return codeString;
+  }
+
+  componentDidMount() {
+    setLessVariables(this.state.variables);
   }
 
   render() {
@@ -68,17 +79,17 @@ class ThemeBuilder extends React.Component {
           </Modal>
         </FormItem>
         {Object
-          .keys(VARIABLES)
-          .filter(variable => (!this.state.search || variable.includes(this.state.search)))
-          .map(variable => {
+          .keys(this.state.variables)
+          .filter(key => (!this.state.search || key.includes(this.state.search)))
+          .map(key => {
             return <FormItem
-              help={variable}
-              key={variable}>
-              {getFieldDecorator(variable, {
-                initialValue: VARIABLES[variable].default,
+              help={key}
+              key={key}>
+              {getFieldDecorator(key, {
+                initialValue: this.state.variables[key],
                 rules: [{ required: true, message: 'Please input the variable value!' }],
               })(
-                <Input placeholder={variable} />
+                <Input placeholder={key} />
               )}
             </FormItem>
           })}

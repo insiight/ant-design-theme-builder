@@ -13,7 +13,7 @@
   box-shadow: @box-shadow-base;
   color: @text-color;
   background: @component-background;
-  line-height: 46px;
+  line-height: (4.6 * @unit);
 
   &-hidden {
     display: none;
@@ -28,7 +28,7 @@
     color: @text-color-secondary;
     font-size: @font-size-base;
     line-height: 1.5;
-    padding: 8px 16px;
+    padding: (0.8 * @unit) (1.6 * @unit);
   }
 
   &-item,
@@ -70,7 +70,7 @@
   }
 
   &-item-divider {
-    height: 1px;
+    height: (0.1 * @unit);
     overflow: hidden;
     background-color: @border-color-split;
     line-height: 0;
@@ -90,7 +90,7 @@
 
   &-horizontal &-item,
   &-horizontal &-submenu {
-    margin-top: -1px;
+    margin-top: -(0.1 * @unit);
   }
 
   &-horizontal > &-item:hover,
@@ -121,8 +121,8 @@
   &-vertical {
     border-right: @border-width-base @border-style-base @border-color-split;
     .@{menu-prefix-cls}-item {
-      margin-left: -1px;
-      left: 1px;
+      margin-left: -(0.1 * @unit);
+      left: (0.1 * @unit);
       position: relative;
       z-index: 1;
       &:after {
@@ -131,7 +131,7 @@
         right: 0;
         top: 0;
         bottom: 0;
-        border-right: 3px solid @primary-color;
+        border-right: (0.3 * @unit) solid @primary-color;
         transform: scaleY(.0001);
         transition: all .2s;
       }
@@ -169,7 +169,7 @@
   }
 
   &-inline-collapsed {
-    width: 64px;
+    width: (6.4 * @unit);
     transition: all .3s;
     > .@{menu-prefix-cls}-item,
     > .@{menu-prefix-cls}-submenu > .@{menu-prefix-cls}-submenu-title {
@@ -183,8 +183,8 @@
     .@{menu-prefix-cls}-submenu-title {
       padding: 0;
       .@{iconfont-css-prefix} {
-        font-size: 16px;
-        line-height: 42px;
+        font-size: (1.6 * @unit);
+        line-height: (4.2 * @unit);
         margin: 0;
         + span {
           max-width: 0;
@@ -204,7 +204,7 @@
     left: 0;
     position: absolute;
     min-width: 100%;
-    margin-top: 7px;
+    margin-top: (0.7 * @unit);
     z-index: @zindex-dropdown;
   }
 
@@ -216,22 +216,22 @@
     top: 0;
     left: 100%;
     position: absolute;
-    min-width: 160px;
-    margin-left: 4px;
+    min-width: (16 * @unit);
+    margin-left: (0.4 * @unit);
     z-index: @zindex-dropdown;
   }
 
   &-item,
   &-submenu-title {
     margin: 0;
-    padding: 0 20px;
+    padding: 0 (2 * @unit);
     position: relative;
     display: block;
     white-space: nowrap;
 
     .@{iconfont-css-prefix} {
-      min-width: 14px;
-      margin-right: 8px;
+      min-width: (1.4 * @unit);
+      margin-right: (0.8 * @unit);
       transition: all .3s;
       vertical-align: middle;
       + span {
@@ -245,8 +245,8 @@
   }
 
   & > &-item-divider {
-    height: 1px;
-    margin: 1px 0;
+    height: (0.1 * @unit);
+    margin: (0.1 * @unit) 0;
     overflow: hidden;
     padding: 0;
     line-height: 0;
@@ -271,7 +271,7 @@
       position: absolute;
       transition: transform .3s;
       content: "\e61d";
-      right: 16px;
+      right: (1.6 * @unit);
       .ie-rotate(3);
       transform: rotate(270deg) scale(0.75);
     }
@@ -286,9 +286,9 @@
       position: absolute;
       transition: transform .3s;
       content: "\e61d";
-      right: 16px;
+      right: (1.6 * @unit);
       top: 0;
-      .iconfont-size-under-12px(8px);
+      .iconfont-size-under-12px((0.8 * @unit));
     }
 
     &-open {
@@ -315,15 +315,15 @@
     > .@{menu-prefix-cls}-item,
     > .@{menu-prefix-cls}-submenu {
       position: relative;
-      top: 1px;
+      top: (0.1 * @unit);
       float: left;
-      border-bottom: 2px solid transparent;
+      border-bottom: (0.2 * @unit) solid transparent;
 
       &:hover,
       &-active,
       &-open,
       &-selected {
-        border-bottom: 2px solid @primary-color;
+        border-bottom: (0.2 * @unit) solid @primary-color;
         color: @primary-color;
       }
 
@@ -348,10 +348,10 @@
   &-inline {
     .@{menu-prefix-cls}-item,
     .@{menu-prefix-cls}-submenu-title {
-      padding: 0 16px;
+      padding: 0 (1.6 * @unit);
       font-size: @font-size-base;
-      line-height: 42px;
-      height: 42px;
+      line-height: (4.2 * @unit);
+      height: (4.2 * @unit);
       overflow: hidden;
       text-overflow: ellipsis;
     }
@@ -360,7 +360,7 @@
   &-item-group-list {
     .@{menu-prefix-cls}-item,
     .@{menu-prefix-cls}-submenu-title {
-      padding: 0 16px 0 28px;
+      padding: 0 (1.6 * @unit) 0 (2.8 * @unit);
     }
   }
 
@@ -385,14 +385,14 @@
     border-radius: 0;
     & > .@{menu-prefix-cls}-item,
     & > .@{menu-prefix-cls}-submenu > .@{menu-prefix-cls}-submenu-title {
-      line-height: 42px;
-      height: 42px;
+      line-height: (4.2 * @unit);
+      height: (4.2 * @unit);
       list-style-type: disc;
       list-style-position: inside;
     }
 
     & .@{menu-prefix-cls}-item-group-title {
-      padding-left: 32px;
+      padding-left: (3.2 * @unit);
     }
   }
 

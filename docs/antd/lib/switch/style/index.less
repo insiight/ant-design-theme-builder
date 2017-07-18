@@ -8,12 +8,12 @@
   position: relative;
   display: inline-block;
   box-sizing: border-box;
-  height: 22px;
-  min-width: 44px;
-  line-height: 20px;
+  height: (2.2 * @unit);
+  min-width: (4.4 * @unit);
+  line-height: (2 * @unit);
   vertical-align: middle;
-  border-radius: 20px;
-  border: 1px solid #ccc;
+  border-radius: (2 * @unit);
+  border: (0.1 * @unit) solid #ccc;
   background-color: @disabled-color;
   cursor: pointer;
   transition: all @switch-duration;
@@ -22,19 +22,19 @@
   &-inner {
     color: #fff;
     font-size: @font-size-base;
-    margin-left: 24px;
-    margin-right: 6px;
+    margin-left: (2.4 * @unit);
+    margin-right: (0.6 * @unit);
     display: block;
   }
 
   &:after {
     position: absolute;
-    width: 18px;
-    height: 18px;
-    left: 1px;
-    top: 1px;
+    width: (1.8 * @unit);
+    height: (1.8 * @unit);
+    left: (0.1 * @unit);
+    top: (0.1 * @unit);
 
-    border-radius: 18px;
+    border-radius: (1.8 * @unit);
     background-color: @component-background;
     content: " ";
     cursor: pointer;
@@ -42,11 +42,11 @@
   }
 
   &:active:after {
-    width: 24px;
+    width: (2.4 * @unit);
   }
 
   &:focus {
-    box-shadow: 0 0 0 2px fade(@primary-color, 20%);
+    box-shadow: 0 0 0 (0.2 * @unit) fade(@primary-color, 20%);
     outline: 0;
   }
 
@@ -55,41 +55,41 @@
   }
 
   &-small {
-    height: 14px;
-    min-width: 28px;
-    line-height: 12px;
+    height: (1.4 * @unit);
+    min-width: (2.8 * @unit);
+    line-height: (1.2 * @unit);
 
     .@{switch-prefix-cls}-inner {
-      margin-left: 18px;
-      margin-right: 3px;
+      margin-left: (1.8 * @unit);
+      margin-right: (0.3 * @unit);
     }
 
     &:after {
-      width: 12px;
-      height: 12px;
+      width: (1.2 * @unit);
+      height: (1.2 * @unit);
       top: 0;
-      left: 0.5px;
+      left: (0.05 * @unit);
     }
 
     &:active:after {
-      width: 16px;
+      width: (1.6 * @unit);
     }
   }
 
   &-small&-checked {
     &:after {
       left: 100%;
-      margin-left: -12.5px;
+      margin-left: -(1.25 * @unit);
     }
 
     .@{switch-prefix-cls}-inner {
-      margin-left: 3px;
-      margin-right: 18px;
+      margin-left: (0.3 * @unit);
+      margin-right: (1.8 * @unit);
     }
   }
 
   &-small:active&-checked:after {
-    margin-left: -16.5px;
+    margin-left: -(1.65 * @unit);
   }
 
   &-checked {
@@ -97,17 +97,17 @@
     background-color: @primary-color;
 
     .@{switch-prefix-cls}-inner {
-      margin-left: 6px;
-      margin-right: 24px;
+      margin-left: (0.6 * @unit);
+      margin-right: (2.4 * @unit);
     }
 
     &:after {
       left: 100%;
-      margin-left: -19px;
+      margin-left: -(1.9 * @unit);
     }
 
     &:active:after {
-      margin-left: -25px;
+      margin-left: -(2.5 * @unit);
     }
   }
 

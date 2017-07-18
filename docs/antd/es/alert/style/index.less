@@ -7,26 +7,26 @@
 
 .@{alert-prefix-cls} {
   position: relative;
-  padding: 8px 48px 8px 38px;
+  padding: (0.8 * @unit) (4.8 * @unit) (0.8 * @unit) (3.8 * @unit);
   border-radius: @border-radius-base;
   color: @alert-text-color;
   font-size: @font-size-base;
-  line-height: @font-size-base + 4px;
+  line-height: @font-size-base + (0.4 * @unit);
 
   &&-no-icon {
-    padding: 8px 48px 8px 16px;
+    padding: (0.8 * @unit) (4.8 * @unit) (0.8 * @unit) (1.6 * @unit);
   }
 
   &-icon {
     font-size: @font-size-lg;
-    top: 9.5px;
-    left: 16px;
+    top: (0.95 * @unit);
+    left: (1.6 * @unit);
     position: absolute;
   }
 
   &-description {
     font-size: @font-size-base;
-    line-height: 21px;
+    line-height: (2.1 * @unit);
     display: none;
   }
 
@@ -65,10 +65,10 @@
   &-close-icon {
     font-size: @font-size-base;
     position: absolute;
-    right: 16px;
-    top: 10px;
-    height: 12px;
-    line-height: 12px;
+    right: (1.6 * @unit);
+    top: (1 * @unit);
+    height: (1.2 * @unit);
+    line-height: (1.2 * @unit);
     overflow: hidden;
     cursor: pointer;
 
@@ -83,11 +83,11 @@
 
   &-close-text {
     position: absolute;
-    right: 16px;
+    right: (1.6 * @unit);
   }
 
   &-with-description {
-    padding: 16px 16px 16px 60px;
+    padding: (1.6 * @unit) (1.6 * @unit) (1.6 * @unit) (6 * @unit);
     position: relative;
     border-radius: @border-radius-base;
     color: @text-color;
@@ -95,20 +95,20 @@
   }
 
   &-with-description&-no-icon {
-    padding: 16px;
+    padding: (1.6 * @unit);
   }
 
   &-with-description &-icon {
     position: absolute;
-    top: 16px;
-    left: 20px;
-    font-size: 24px;
+    top: (1.6 * @unit);
+    left: (2 * @unit);
+    font-size: (2.4 * @unit);
   }
 
   &-with-description &-close-icon {
     position: absolute;
-    top: 16px;
-    right: 16px;
+    top: (1.6 * @unit);
+    right: (1.6 * @unit);
     cursor: pointer;
     font-size: @font-size-base;
   }
@@ -117,7 +117,7 @@
     font-size: @font-size-lg;
     color: @alert-message-color;
     display: block;
-    margin-bottom: 4px;
+    margin-bottom: (0.4 * @unit);
   }
 
   &-with-description &-description {

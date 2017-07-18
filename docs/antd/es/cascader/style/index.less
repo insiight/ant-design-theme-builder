@@ -45,30 +45,30 @@
     &-label {
       position: absolute;
       left: 0;
-      height: 20px;
-      line-height: 20px;
+      height: (2 * @unit);
+      line-height: (2 * @unit);
       top: 50%;
-      margin-top: -10px;
+      margin-top: -(1 * @unit);
       white-space: nowrap;
       text-overflow: ellipsis;
       overflow: hidden;
       width: 100%;
-      padding: 0 12px 0 8px;
+      padding: 0 (1.2 * @unit) 0 (0.8 * @unit);
     }
 
     &-clear {
       opacity: 0;
       position: absolute;
-      right: 8px;
+      right: (0.8 * @unit);
       z-index: 2;
       background: @component-background;
       top: 50%;
       font-size: @font-size-base;
       color: @disabled-color;
-      width: 12px;
-      height: 12px;
-      margin-top: -6px;
-      line-height: 12px;
+      width: (1.2 * @unit);
+      height: (1.2 * @unit);
+      margin-top: -(0.6 * @unit);
+      line-height: (1.2 * @unit);
       cursor: pointer;
       transition: color 0.3s ease, opacity 0.15s ease;
       &:hover {
@@ -85,13 +85,13 @@
       position: absolute;
       z-index: 1;
       top: 50%;
-      right: 8px;
-      width: 12px;
-      height: 12px;
-      margin-top: -6px;
-      line-height: 12px;
+      right: (0.8 * @unit);
+      width: (1.2 * @unit);
+      height: (1.2 * @unit);
+      margin-top: -(0.6 * @unit);
+      line-height: (1.2 * @unit);
       color: @text-color-secondary;
-      .iconfont-size-under-12px(9px);
+      .iconfont-size-under-12px((0.9 * @unit));
       &:before {
         transition: transform 0.2s ease;
       }
@@ -136,8 +136,8 @@
   &-menu {
     display: inline-block;
     vertical-align: top;
-    min-width: 111px;
-    height: 180px;
+    min-width: (11.1 * @unit);
+    height: (18 * @unit);
     list-style: none;
     margin: 0;
     padding: 0;
@@ -148,7 +148,7 @@
     }
     &:last-child {
       border-right-color: transparent;
-      margin-right: -1px;
+      margin-right: -(0.1 * @unit);
       border-radius: 0 @border-radius-base @border-radius-base 0;
     }
     &:only-child {
@@ -156,7 +156,7 @@
     }
   }
   &-menu-item {
-    padding: 7px 8px;
+    padding: (0.7 * @unit) (0.8 * @unit);
     cursor: pointer;
     white-space: nowrap;
     transition: all 0.3s;
@@ -181,10 +181,10 @@
       position: relative;
       &:after {
         .iconfont-font("\e61f");
-        .iconfont-size-under-12px(8px);
+        .iconfont-size-under-12px((0.8 * @unit));
         color: @text-color-secondary;
         position: absolute;
-        right: 8px;
+        right: (0.8 * @unit);
       }
     }
     &-loading:after {

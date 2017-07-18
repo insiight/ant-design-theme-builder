@@ -21,7 +21,7 @@ label {
 
 .@{form-prefix-cls}-item-required:before {
   display: inline-block;
-  margin-right: 4px;
+  margin-right: (0.4 * @unit);
   content: "*";
   font-family: SimSun;
   line-height: 1;
@@ -104,15 +104,15 @@ input[type="checkbox"] {
         & when not (@form-item-trailing-colon=true) {
           content: " ";
         }
-        margin: 0 8px 0 2px;
+        margin: 0 (0.8 * @unit) 0 (0.2 * @unit);
         position: relative;
-        top: -0.5px;
+        top: -(0.05 * @unit);
       }
     }
   }
 
   .@{ant-prefix}-switch {
-    margin: 4px 0;
+    margin: (0.4 * @unit) 0;
   }
 
   &-no-colon &-label label:after {
@@ -127,12 +127,12 @@ input[type="checkbox"] {
 }
 
 .@{form-prefix-cls}-extra {
-  padding-top: 4px;
+  padding-top: (0.4 * @unit);
 }
 
 .@{form-prefix-cls}-text {
   display: inline-block;
-  padding-right: 8px;
+  padding-right: (0.8 * @unit);
 }
 
 .@{form-prefix-cls}-split {
@@ -144,7 +144,7 @@ input[type="checkbox"] {
 form {
   .has-feedback {
     .@{ant-prefix}-input {
-      padding-right: 24px;
+      padding-right: (2.4 * @unit);
     }
 
     // Fix overlapping between feedback icon and <Select>'s arrow.
@@ -152,18 +152,18 @@ form {
     .@{ant-prefix}-select {
       &-arrow,
       &-selection__clear {
-        right: 28px;
+        right: (2.8 * @unit);
       }
       &-selection-selected-value {
-        padding-right: 42px;
+        padding-right: (4.2 * @unit);
       }
     }
     .@{ant-prefix}-cascader-picker {
       &-arrow {
-        padding-right: 36px;
+        padding-right: (3.6 * @unit);
       }
       &-clear {
-        right: 28px;
+        right: (2.8 * @unit);
       }
     }
 
@@ -171,7 +171,7 @@ form {
     .@{ant-prefix}-calendar-picker {
       &-icon,
       &-clear {
-        right: 28px;
+        right: (2.8 * @unit);
       }
     }
   }
@@ -187,8 +187,8 @@ form {
 
   input[type="radio"],
   input[type="checkbox"] {
-    width: 14px;
-    height: 14px;
+    width: (1.4 * @unit);
+    height: (1.4 * @unit);
   }
 
   // Radios and checkboxes on same line
@@ -198,7 +198,7 @@ form {
     vertical-align: middle;
     font-weight: normal;
     cursor: pointer;
-    margin-left: 8px;
+    margin-left: (0.8 * @unit);
 
     &:first-child {
       margin-left: 0;
@@ -216,8 +216,8 @@ form {
   }
 
   .@{ant-prefix}-input-number {
-    margin-top: -1px;
-    margin-right: 8px;
+    margin-top: -(0.1 * @unit);
+    margin-right: (0.8 * @unit);
   }
 
   .@{ant-prefix}-select,
@@ -255,13 +255,13 @@ form {
   }
 
   .@{ant-prefix}-select-selection--single {
-    margin-left: -1px;
+    margin-left: -(0.1 * @unit);
     height: @input-height-lg;
     background-color: #eee;
     .@{ant-prefix}-select-selection__rendered {
-      padding-left: 8px;
-      padding-right: 25px;
-      line-height: 30px;
+      padding-left: (0.8 * @unit);
+      padding-right: (2.5 * @unit);
+      line-height: (3 * @unit);
     }
   }
 
@@ -274,7 +274,7 @@ form {
 // Form layout
 //== Vertical Form
 .make-vertical-layout() {
-  padding: 0 0 8px;
+  padding: 0 0 (0.8 * @unit);
   display: block;
   text-align: left;
   line-height: @line-height-base;
@@ -318,11 +318,11 @@ form {
 .@{form-prefix-cls}-inline {
   .@{form-prefix-cls}-item {
     display: inline-block;
-    margin-right: 16px;
+    margin-right: (1.6 * @unit);
     margin-bottom: 0;
 
     &-with-help {
-      margin-bottom: 24px;
+      margin-bottom: (2.4 * @unit);
     }
 
     > div {
@@ -496,7 +496,7 @@ form {
 
 .@{ant-prefix}-advanced-search-form {
   .@{form-prefix-cls}-item {
-    margin-bottom: 16px;
+    margin-bottom: (1.6 * @unit);
   }
   .@{ant-prefix}-input,
   .@{ant-prefix}-input-group .@{ant-prefix}-input,

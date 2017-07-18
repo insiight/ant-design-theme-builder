@@ -18,17 +18,20 @@ clean:
 less: deps-node
 	node_modules/.bin/static -p 8888 -H '{"Access-Control-Allow-Origin": "*"}'
 
-build: deps-node clean build-less
+build: deps-node clean build-less build-theme-variable
 	NODE_ENV=production node node_modules/webpack/bin/webpack --progress
 
 build-less:
-	./node_modules/.bin/babel tools/copyAntdLessFiles.js -o tools/copyAntdLessFiles.es6.js && node tools/copyAntdLessFiles.es6.js && rm tools/copyAntdLessFiles.es6.js
+	./node_modules/.bin/babel tools --out-dir tools-dist && node tools-dist/copyAntdLessFiles.js
 
 build-demo: deps-node
-	./node_modules/.bin/babel tools/demoBuilder.js -o tools/demoBuilder.es6.js && node tools/demoBuilder.es6.js && rm tools/demoBuilder.es6.js
+	./node_modules/.bin/babel tools --out-dir tools-dist && node tools-dist/demoBuilder.js
+
+build-theme-variable: deps-node
+	./node_modules/.bin/babel tools --out-dir tools-dist && node tools-dist/themeVariableExtrator.js
 
 px-to-rem:
-	./node_modules/.bin/babel tools/lessPXToREM.js -o tools/lessPXToREM.es6.js && node tools/lessPXToREM.es6.js && rm tools/lessPXToREM.es6.js
+	./node_modules/.bin/babel tools --out-dir tools-dist && node tools-dist/lessPXToREM.js
 
 ################################################################################
 # Node

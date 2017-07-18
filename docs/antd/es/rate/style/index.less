@@ -7,7 +7,7 @@
   margin: 0;
   padding: 0;
   list-style: none;
-  font-size: 20px;
+  font-size: (2 * @unit);
   display: inline-block;
   vertical-align: middle;
 
@@ -22,7 +22,7 @@
     margin: 0;
     padding: 0;
     display: inline-block;
-    margin-right: 8px;
+    margin-right: (0.8 * @unit);
     position: relative;
     transition: all .3s;
     color: @rate-star-bg;
@@ -65,7 +65,7 @@
   }
 
   &-text {
-    margin-left: 8px;
+    margin-left: (0.8 * @unit);
     vertical-align: middle;
     display: inline-block;
     font-size: @font-size-base;

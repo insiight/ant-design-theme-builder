@@ -12,7 +12,7 @@
   }
 
   .@{ant-prefix}-modal-body {
-    padding: 30px 40px;
+    padding: (3 * @unit) (4 * @unit);
   }
 
   &-body-wrapper {
@@ -27,26 +27,26 @@
     }
 
     .@{confirm-prefix-cls}-content {
-      margin-left: 42px;
+      margin-left: (4.2 * @unit);
       font-size: @font-size-base;
       color: @text-color;
-      margin-top: 8px;
+      margin-top: (0.8 * @unit);
     }
 
     > .@{iconfont-css-prefix} {
-      font-size: 24px;
-      margin-right: 16px;
-      padding: 0 1px;
+      font-size: (2.4 * @unit);
+      margin-right: (1.6 * @unit);
+      padding: 0 (0.1 * @unit);
       float: left;
     }
   }
 
   .@{confirm-prefix-cls}-btns {
-    margin-top: 30px;
+    margin-top: (3 * @unit);
     float: right;
 
     button + button {
-      margin-left: 10px;
+      margin-left: (1 * @unit);
       margin-bottom: 0;
     }
   }

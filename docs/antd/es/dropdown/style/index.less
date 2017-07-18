@@ -5,8 +5,8 @@
 
 .@{dropdown-prefix-cls} {
   position: absolute;
-  left: -9999px;
-  top: -9999px;
+  left: -(999.9 * @unit);
+  top: -(999.9 * @unit);
   z-index: @zindex-dropdown;
   display: block;
   font-size: @font-size-base;
@@ -17,7 +17,7 @@
     position: relative;
 
     .@{ant-prefix}-btn > .@{iconfont-css-prefix}-down {
-      .iconfont-size-under-12px(10px);
+      .iconfont-size-under-12px((1 * @unit));
     }
 
     .@{iconfont-css-prefix}-down:before {
@@ -50,7 +50,7 @@
 
     &-item,
     &-submenu-title {
-      padding: 7px 8px;
+      padding: (0.7 * @unit) (0.8 * @unit);
       margin: 0;
       clear: both;
       font-size: @font-size-base;
@@ -63,8 +63,8 @@
       > a {
         color: @text-color;
         display: block;
-        padding: 7px 8px;
-        margin: -7px -8px;
+        padding: (0.7 * @unit) (0.8 * @unit);
+        margin: -(0.7 * @unit) -(0.8 * @unit);
         transition: all .3s;
         &:focus {
           text-decoration: none;
@@ -108,7 +108,7 @@
       }
 
       &-divider {
-        height: 1px;
+        height: (0.1 * @unit);
         overflow: hidden;
         background-color: @border-color-split;
         line-height: 0;
@@ -119,9 +119,9 @@
       font-family: "anticon" !important;
       position: absolute;
       content: "\e61f";
-      right: 8px;
+      right: (0.8 * @unit);
       color: @text-color-secondary;
-      .iconfont-size-under-12px(10px);
+      .iconfont-size-under-12px((1 * @unit));
     }
 
     &-submenu-vertical {
@@ -133,7 +133,7 @@
       left: 100%;
       position: absolute;
       min-width: 100%;
-      margin-left: 4px;
+      margin-left: (0.4 * @unit);
       transform-origin: 0 0;
     }
 
@@ -186,7 +186,7 @@
 .@{dropdown-prefix-cls}-trigger,
 .@{dropdown-prefix-cls}-link {
   .@{iconfont-css-prefix}-down {
-    .iconfont-size-under-12px(10px);
+    .iconfont-size-under-12px((1 * @unit));
   }
 }
 
@@ -194,10 +194,10 @@
   white-space: nowrap;
 
   &.@{ant-prefix}-btn-group > .@{ant-prefix}-btn:last-child:not(:first-child) {
-    padding-right: 8px;
+    padding-right: (0.8 * @unit);
   }
   .@{iconfont-css-prefix}-down {
-    .iconfont-size-under-12px(10px);
+    .iconfont-size-under-12px((1 * @unit));
   }
 }
 

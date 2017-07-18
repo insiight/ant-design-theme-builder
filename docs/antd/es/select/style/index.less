@@ -13,16 +13,16 @@
   text-rendering: auto;
   opacity: 0;
   position: absolute;
-  right: 8px;
+  right: (0.8 * @unit);
   z-index: 1;
   background: @component-background;
   top: 50%;
   font-size: @font-size-base;
   color: @disabled-color;
-  width: 12px;
-  height: 12px;
-  margin-top: -6px;
-  line-height: 12px;
+  width: (1.2 * @unit);
+  height: (1.2 * @unit);
+  margin-top: -(0.6 * @unit);
+  line-height: (1.2 * @unit);
   cursor: pointer;
   transition: color 0.3s ease, opacity 0.15s ease;
   &:before {
@@ -51,10 +51,10 @@
     .iconfont-mixin();
     position: absolute;
     top: 50%;
-    right: 8px;
+    right: (0.8 * @unit);
     line-height: 1;
-    margin-top: -6px;
-    .iconfont-size-under-12px(9px);
+    margin-top: -(0.6 * @unit);
+    .iconfont-size-under-12px((0.9 * @unit));
 
     * {
       display: none;
@@ -102,7 +102,7 @@
       text-overflow: ellipsis;
       white-space: nowrap;
       max-width: 100%;
-      padding-right: 14px;
+      padding-right: (1.4 * @unit);
     }
   }
 
@@ -130,7 +130,7 @@
   &-disabled &-selection--multiple &-selection__choice {
     background: @background-color-active;
     color: #aaa;
-    padding-right: 10px;
+    padding-right: (1 * @unit);
     &__remove {
       display: none;
     }
@@ -144,10 +144,10 @@
 
   &-selection__rendered {
     display: block;
-    margin-left: 7px;
-    margin-right: 7px;
+    margin-left: (0.7 * @unit);
+    margin-right: (0.7 * @unit);
     position: relative;
-    line-height: @input-height-base - 2px;
+    line-height: @input-height-base - (0.2 * @unit);
     // https://github.com/ant-design/ant-design/issues/3481#issuecomment-254721026
     &:after {
       content: '.';
@@ -163,14 +163,14 @@
       height: @input-height-lg;
     }
     .@{select-prefix-cls}-selection__rendered {
-      line-height: @input-height-lg - 2px;
+      line-height: @input-height-lg - (0.2 * @unit);
     }
     .@{select-prefix-cls}-selection--multiple {
       min-height: @input-height-lg;
       .@{select-prefix-cls}-selection__rendered {
         li {
-          height: @input-height-lg - 8px;
-          line-height: @input-height-lg - 8px;
+          height: @input-height-lg - (0.8 * @unit);
+          line-height: @input-height-lg - (0.8 * @unit);
         }
       }
       .@{select-prefix-cls}-selection__clear {
@@ -184,14 +184,14 @@
       height: @input-height-sm;
     }
     .@{select-prefix-cls}-selection__rendered {
-      line-height: @input-height-sm - 2px;
+      line-height: @input-height-sm - (0.2 * @unit);
     }
     .@{select-prefix-cls}-selection--multiple {
       min-height: @input-height-sm;
       .@{select-prefix-cls}-selection__rendered {
         li {
-          height: @input-height-sm - 8px;
-          line-height: @input-height-sm - 8px;
+          height: @input-height-sm - (0.8 * @unit);
+          line-height: @input-height-sm - (0.8 * @unit);
         }
       }
       .@{select-prefix-cls}-selection__clear {
@@ -218,12 +218,12 @@
     position: absolute;
     top: 50%;
     left: 0;
-    right: 9px;
+    right: (0.9 * @unit);
     color: @input-placeholder-color;
-    line-height: 20px;
-    height: 20px;
+    line-height: (2 * @unit);
+    height: (2 * @unit);
     max-width: 100%;
-    margin-top: -10px;
+    margin-top: -(1 * @unit);
     overflow: hidden;
     text-overflow: ellipsis;
     white-space: nowrap;
@@ -231,7 +231,7 @@
   }
 
   &-search__field__placeholder {
-    left: 8px;
+    left: (0.8 * @unit);
   }
 
   &-search--inline {
@@ -262,7 +262,7 @@
     .@{select-prefix-cls}-search__field__mirror {
       position: absolute;
       top: 0;
-      left: -9999px;
+      left: -(999.9 * @unit);
       white-space: pre;
       pointer-events: none;
     }
@@ -275,7 +275,7 @@
   &-selection--multiple {
     min-height: @input-height-base;
     cursor: text;
-    padding-bottom: 3px;
+    padding-bottom: (0.3 * @unit);
     .clearfix;
 
     .@{select-prefix-cls}-search--inline {
@@ -289,32 +289,32 @@
     }
 
     .@{select-prefix-cls}-selection__rendered {
-      margin-left: 5px;
-      margin-bottom: -3px;
+      margin-left: (0.5 * @unit);
+      margin-bottom: -(0.3 * @unit);
       height: auto;
     }
 
     > ul > li,
     .@{select-prefix-cls}-selection__rendered > ul > li {  // for tree-select
-      margin-top: 3px;
-      height: @input-height-base - 8px;
-      line-height: @input-height-base - 8px;
+      margin-top: (0.3 * @unit);
+      height: @input-height-base - (0.8 * @unit);
+      line-height: @input-height-base - (0.8 * @unit);
     }
 
     .@{select-prefix-cls}-selection__choice {
       color: @tag-default-color;
       background-color: @tag-default-bg;
-      border-radius: 4px;
+      border-radius: (0.4 * @unit);
       cursor: default;
       float: left;
-      margin-right: 4px;
+      margin-right: (0.4 * @unit);
       max-width: 99%;
       position: relative;
       overflow: hidden;
       transition: padding .3s @ease-in-out;
-      padding: 0 20px 0 10px;
+      padding: 0 (2 * @unit) 0 (1 * @unit);
       &__disabled {
-        padding: 0 10px;
+        padding: 0 (1 * @unit);
       }
     }
 
@@ -335,10 +335,10 @@
       display: inline-block;
       font-weight: bold;
       transition: all 0.3s @ease-in-out;
-      .iconfont-size-under-12px(8px);
+      .iconfont-size-under-12px((0.8 * @unit));
       position: absolute;
-      right: 4px;
-      padding: 0 0 0 8px;
+      right: (0.4 * @unit);
+      padding: 0 0 0 (0.8 * @unit);
       &:hover {
         color: #404040;
       }
@@ -353,7 +353,7 @@
   }
 
   &-allow-clear &-selection--multiple &-selection__rendered {
-    margin-right: 20px; // In case that clear button will overlap content
+    margin-right: (2 * @unit); // In case that clear button will overlap content
   }
 
   &-open {
@@ -392,7 +392,7 @@
     }
   }
   &-combobox&-allow-clear &-selection:hover &-selection__rendered {
-    margin-right: 20px; // In case that clear button will overlap content
+    margin-right: (2 * @unit); // In case that clear button will overlap content
   }
 }
 
@@ -424,8 +424,8 @@
   border-radius: @border-radius-base;
   box-sizing: border-box;
   z-index: @zindex-dropdown;
-  left: -9999px;
-  top: -9999px;
+  left: -(999.9 * @unit);
+  top: -(999.9 * @unit);
   position: absolute;
   outline: none;
   overflow: hidden;
@@ -436,7 +436,7 @@
     margin-bottom: 0;
     padding-left: 0; // Override default ul/ol
     list-style: none;
-    max-height: 250px;
+    max-height: (25 * @unit);
     overflow: auto;
 
     &-item-group-list {
@@ -444,20 +444,20 @@
       padding: 0;
 
       > .@{select-prefix-cls}-dropdown-menu-item {
-        padding-left: 16px;
+        padding-left: (1.6 * @unit);
       }
     }
 
     &-item-group-title {
       color: @text-color-secondary;
       line-height: 1.5;
-      padding: 8px;
+      padding: (0.8 * @unit);
     }
 
     &-item {
       position: relative;
       display: block;
-      padding: 7px 8px;
+      padding: (0.7 * @unit) (0.8 * @unit);
       font-weight: normal;
       color: @text-color;
       white-space: nowrap;
@@ -494,8 +494,8 @@
       }
 
       &-divider {
-        height: 1px;
-        margin: 1px 0;
+        height: (0.1 * @unit);
+        margin: (0.1 * @unit) 0;
         overflow: hidden;
         background-color: #e5e5e5;
         line-height: 0;
@@ -508,14 +508,14 @@
       &:after {
         .iconfont-font("\e632");
         color: transparent;
-        .iconfont-size-under-12px(10px);
+        .iconfont-size-under-12px((1 * @unit));
         transition: all 0.2s ease;
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
-        right: 8px;
+        right: (0.8 * @unit);
         font-weight: bold;
-        text-shadow: 0 0.1px 0, 0.1px 0 0, 0 -0.1px 0, -0.1px 0;
+        text-shadow: 0 (0.01 * @unit) 0, (0.01 * @unit) 0 0, 0 -(0.01 * @unit) 0, -(0.01 * @unit) 0;
       }
 
       &:hover:after {

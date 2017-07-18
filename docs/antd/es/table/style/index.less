@@ -40,12 +40,12 @@
 
     .@{iconfont-css-prefix}-filter, .@{table-prefix-cls}-filter-icon {
       position: relative;
-      margin-left: 4px;
+      margin-left: (0.4 * @unit);
       font-size: @font-size-base;
       cursor: pointer;
       color: #aaa;
       transition: all .3s;
-      width: 14px;
+      width: (1.4 * @unit);
 
       &:hover {
         color: @text-color;
@@ -54,10 +54,10 @@
       &:after {
         content: '';
         position: absolute;
-        width: 14px;
-        height: 50px;
+        width: (1.4 * @unit);
+        height: (5 * @unit);
         left: 0;
-        top: -19px;
+        top: -(1.9 * @unit);
       }
     }
 
@@ -93,10 +93,10 @@
     position: relative;
     &:before {
       content: '';
-      height: 1px;
+      height: (0.1 * @unit);
       background: @table-header-bg;
       position: absolute;
-      top: -1px;
+      top: -(0.1 * @unit);
       width: 100%;
       left: 0;
     }
@@ -109,7 +109,7 @@
   &-title {
     padding: @table-padding-vertical 0;
     position: relative;
-    top: 1px;
+    top: (0.1 * @unit);
     border-radius: @border-radius-base @border-radius-base 0 0;
   }
 
@@ -152,22 +152,22 @@
   }
 
   &-thead > tr > th.@{table-prefix-cls}-selection-column-custom {
-    padding-left: 16px;
+    padding-left: (1.6 * @unit);
     padding-right: 0;
   }
 
   &-thead > tr > th.@{table-prefix-cls}-selection-column,
   &-tbody > tr > td.@{table-prefix-cls}-selection-column {
     text-align: center;
-    min-width: 62px;
-    width: 62px;
+    min-width: (6.2 * @unit);
+    width: (6.2 * @unit);
   }
 
   &-expand-icon-th,
   &-row-expand-icon-cell {
     text-align: center;
-    min-width: 50px;
-    width: 50px;
+    min-width: (5 * @unit);
+    width: (5 * @unit);
   }
 
   &-header {
@@ -186,48 +186,48 @@
       opacity: 0.5;
     }
     .@{table-prefix-cls}-spin-holder {
-      height: 20px;
-      line-height: 20px;
+      height: (2 * @unit);
+      line-height: (2 * @unit);
       left: 50%;
       top: 50%;
-      margin-left: -30px;
+      margin-left: -(3 * @unit);
       position: absolute;
     }
     .@{table-prefix-cls}-with-pagination {
-      margin-top: -20px;
+      margin-top: -(2 * @unit);
     }
     .@{table-prefix-cls}-without-pagination {
-      margin-top: 10px;
+      margin-top: (1 * @unit);
     }
   }
 
   &-middle {
     .@{table-prefix-cls}-thead > tr > th:not(.@{table-prefix-cls}-selection-column),
     .@{table-prefix-cls}-tbody > tr > td {
-      padding: 10px 8px;
+      padding: (1 * @unit) (0.8 * @unit);
     }
 
     .@{table-prefix-cls}-title,
     .@{table-prefix-cls}-footer {
-      padding: 10px 8px;
+      padding: (1 * @unit) (0.8 * @unit);
     }
 
     .@{table-prefix-cls}-column-sorter-up:after {
-      top: -13px;
-      height: 13px;
+      top: -(1.3 * @unit);
+      height: (1.3 * @unit);
     }
 
     .@{table-prefix-cls}-column-sorter-down:after {
-      bottom: -11px;
-      height: 13px;
+      bottom: -(1.1 * @unit);
+      height: (1.3 * @unit);
     }
 
     .@{table-prefix-cls}-thead > tr > th {
       .@{iconfont-css-prefix}-filter,
       .@{table-prefix-cls}-filter-icon {
         &:after {
-          height: 38px;
-          top: -13px;
+          height: (3.8 * @unit);
+          top: -(1.3 * @unit);
         }
       }
     }
@@ -240,7 +240,7 @@
     .@{table-prefix-cls}-header > table,
     .@{table-prefix-cls}-body > table {
       border: 0;
-      padding: 0 8px;
+      padding: 0 (0.8 * @unit);
     }
 
     .@{table-prefix-cls}-thead > tr > th {
@@ -249,13 +249,13 @@
     }
 
     .@{table-prefix-cls}-tbody > tr > td {
-      padding: 6px 8px;
+      padding: (0.6 * @unit) (0.8 * @unit);
     }
 
     .@{table-prefix-cls}-title,
     .@{table-prefix-cls}-footer,
     .@{table-prefix-cls}-thead > tr > th:not(.@{table-prefix-cls}-selection-column) {
-      padding: 10px 8px;
+      padding: (1 * @unit) (0.8 * @unit);
     }
 
     .@{table-prefix-cls}-title {
@@ -276,21 +276,21 @@
     }
 
     .@{table-prefix-cls}-column-sorter-up:after {
-      top: -14px;
-      height: 13px;
+      top: -(1.4 * @unit);
+      height: (1.3 * @unit);
     }
 
     .@{table-prefix-cls}-column-sorter-down:after {
-      bottom: -11px;
-      height: 13px;
+      bottom: -(1.1 * @unit);
+      height: (1.3 * @unit);
     }
 
     .@{table-prefix-cls}-thead > tr > th {
       .@{iconfont-css-prefix}-filter,
       .@{table-prefix-cls}-filter-icon {
         &:after {
-          height: 39px;
-          top: -14px;
+          height: (3.9 * @unit);
+          top: -(1.4 * @unit);
         }
       }
     }
@@ -298,18 +298,18 @@
 
   &-column-sorter {
     position: relative;
-    margin-left: 4px;
+    margin-left: (0.4 * @unit);
     display: inline-block;
-    width: 14px;
-    height: 14px;
+    width: (1.4 * @unit);
+    height: (1.4 * @unit);
     vertical-align: middle;
     text-align: center;
 
     &-up,
     &-down {
-      line-height: 4px;
+      line-height: (0.4 * @unit);
       display: block;
-      width: 14px;
+      width: (1.4 * @unit);
       cursor: pointer;
       &:hover .@{iconfont-css-prefix} {
         color: @text-color;
@@ -324,25 +324,25 @@
       &:after {
         position: absolute;
         content: '';
-        height: 20px;
-        width: 14px;
+        height: (2 * @unit);
+        width: (1.4 * @unit);
         left: 0;
       }
     }
 
     &-up:after {
-      top: -19px;
+      top: -(1.9 * @unit);
     }
 
     &-down:after {
-      bottom: -17px;
+      bottom: -(1.7 * @unit);
     }
 
     .@{iconfont-css-prefix}-caret-up,
     .@{iconfont-css-prefix}-caret-down {
-      .iconfont-size-under-12px(8px);
-      line-height: 6px;
-      height: 6px;
+      .iconfont-size-under-12px((0.8 * @unit));
+      line-height: (0.6 * @unit);
+      height: (0.6 * @unit);
       color: #aaa;
       &:before {
         -moz-transform-origin: 53% 50%; /* fix firefox position */
@@ -438,18 +438,18 @@
     font-size: @font-size-base;
     color: @text-color-secondary;
     .@{iconfont-css-prefix} {
-      margin-right: 4px;
+      margin-right: (0.4 * @unit);
     }
   }
 
   &-pagination {
-    margin: 16px 0;
+    margin: (1.6 * @unit) 0;
     float: right;
   }
 
   &-filter-dropdown {
-    min-width: 96px;
-    margin-left: -8px;
+    min-width: (9.6 * @unit);
+    margin-left: -(0.8 * @unit);
     background: @component-background;
     border-radius: @border-radius-base;
     box-shadow: @box-shadow-base;
@@ -461,7 +461,7 @@
 
       // https://github.com/ant-design/ant-design/issues/4916
       &-without-submenu {
-        max-height: 400px;
+        max-height: (40 * @unit);
         overflow-x: hidden;
       }
 
@@ -478,7 +478,7 @@
         .@{ant-prefix}-dropdown-menu-submenu-title:after {
           color: @primary-color;
           font-weight: bold;
-          text-shadow: 0 0 2px @primary-2;
+          text-shadow: 0 0 (0.2 * @unit) @primary-2;
         }
       }
     }
@@ -494,7 +494,7 @@
 
     &-btns {
       overflow: hidden;
-      padding: 7px 8px;
+      padding: (0.7 * @unit) (0.8 * @unit);
       border-top: @border-width-base @border-style-base @border-color-split;
     }
 
@@ -517,7 +517,7 @@
 
   &-selection {
     &-select-all-custom {
-      margin-right: 4px !important;
+      margin-right: (0.4 * @unit) !important;
     }
 
     .@{iconfont-css-prefix}-down {
@@ -526,9 +526,9 @@
     }
 
     &-menu {
-      min-width: 96px;
-      margin-top: 5px;
-      margin-left: -30px;
+      min-width: (9.6 * @unit);
+      margin-top: (0.5 * @unit);
+      margin-left: -(3 * @unit);
       background: @component-background;
       border-radius: @border-radius-base;
       box-shadow: @box-shadow-base;
@@ -553,10 +553,10 @@
     &-expand-icon {
       cursor: pointer;
       display: inline-block;
-      width: 17px;
-      height: 17px;
+      width: (1.7 * @unit);
+      height: (1.7 * @unit);
       text-align: center;
-      line-height: 14px;
+      line-height: (1.4 * @unit);
       border: @border-width-base @border-style-base @border-color-split;
       user-select: none;
       background: @component-background;
@@ -590,7 +590,7 @@
   }
 
   .@{table-prefix-cls}-row-indent + .@{table-prefix-cls}-row-expand-icon {
-    margin-right: 8px;
+    margin-right: (0.8 * @unit);
   }
 
   &-scroll {
@@ -617,14 +617,14 @@
 
   &-fixed-header &-scroll &-header {
     overflow: scroll;
-    padding-bottom: 20px;
-    margin-bottom: -20px;
+    padding-bottom: (2 * @unit);
+    margin-bottom: -(2 * @unit);
   }
 
   /* fix firefox scrollbar bug */
   &-fixed-header&-empty &-scroll &-body {
-    padding-bottom: 20px;
-    margin-bottom: -20px;
+    padding-bottom: (2 * @unit);
+    margin-bottom: -(2 * @unit);
   }
 
   &-fixed-left,
@@ -647,14 +647,14 @@
 
   &-fixed-left {
     left: 0;
-    box-shadow: 6px 0 6px -4px @shadow-color;
+    box-shadow: (0.6 * @unit) 0 (0.6 * @unit) -(0.4 * @unit) @shadow-color;
     .@{table-prefix-cls}-header {
       overflow-y: hidden;
     }
     // hide scrollbar in left fixed columns
     .@{table-prefix-cls}-body-inner {
-      margin-right: -20px;
-      padding-right: 20px;
+      margin-right: -(2 * @unit);
+      padding-right: (2 * @unit);
     }
     .@{table-prefix-cls}-fixed-header & .@{table-prefix-cls}-body-inner {
       padding-right: 0;
@@ -667,7 +667,7 @@
 
   &-fixed-right {
     right: 0;
-    box-shadow: -6px 0 6px -4px @shadow-color;
+    box-shadow: -(0.6 * @unit) 0 (0.6 * @unit) -(0.4 * @unit) @shadow-color;
     &,
     table {
       border-radius: 0 @border-radius-base 0 0;

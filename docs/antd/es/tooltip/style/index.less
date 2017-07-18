@@ -41,14 +41,14 @@
 // Wrapper for the tooltip content
 .@{tooltip-prefix-cls}-inner {
   max-width: @tooltip-max-width;
-  padding: 8px 10px;
+  padding: (0.8 * @unit) (1 * @unit);
   color: @tooltip-color;
   text-align: left;
   text-decoration: none;
   background-color: @tooltip-bg;
   border-radius: @border-radius-base;
   box-shadow: @box-shadow-base;
-  min-height: 34px;
+  min-height: (3.4 * @unit);
 }
 
 // Arrows
@@ -75,11 +75,11 @@
   }
 
   &-placement-topLeft &-arrow {
-    left: 16px;
+    left: (1.6 * @unit);
   }
 
   &-placement-topRight &-arrow {
-    right: 16px;
+    right: (1.6 * @unit);
   }
 
   &-placement-right &-arrow,
@@ -96,11 +96,11 @@
   }
 
   &-placement-rightTop &-arrow {
-    top: 8px;
+    top: (0.8 * @unit);
   }
 
   &-placement-rightBottom &-arrow {
-    bottom: 8px;
+    bottom: (0.8 * @unit);
   }
 
   &-placement-left &-arrow,
@@ -117,11 +117,11 @@
   }
 
   &-placement-leftTop &-arrow {
-    top: 8px;
+    top: (0.8 * @unit);
   }
 
   &-placement-leftBottom &-arrow {
-    bottom: 8px;
+    bottom: (0.8 * @unit);
   }
 
   &-placement-bottom &-arrow,
@@ -138,10 +138,10 @@
   }
 
   &-placement-bottomLeft &-arrow {
-    left: 16px;
+    left: (1.6 * @unit);
   }
 
   &-placement-bottomRight &-arrow {
-    right: 16px;
+    right: (1.6 * @unit);
   }
 }

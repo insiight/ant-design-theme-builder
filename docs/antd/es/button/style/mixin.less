@@ -224,11 +224,11 @@
 // circle button: the content only contains icon
 .btn-circle(@btnClassName: btn) {
   .square(@btn-circle-size);
-  .button-size(@btn-circle-size; 0; @font-size-base + 2; 50%);
+  .button-size(@btn-circle-size; 0; @font-size-base + (0.2 * @unit); 50%);
 
   &.@{btnClassName}-lg {
     .square(@btn-circle-size-lg);
-    .button-size(@btn-circle-size-lg; 0; @btn-font-size-lg + 2; 50%);
+    .button-size(@btn-circle-size-lg; 0; @btn-font-size-lg + (0.2 * @unit); 50%);
   }
 
   &.@{btnClassName}-sm {
@@ -246,13 +246,13 @@
   .@{btnClassName} + &,
   & + .@{btnClassName},
   & + & {
-    margin-left: -1px;
+    margin-left: -(0.1 * @unit);
   }
 
   .@{btnClassName}:not(:first-child):not(:last-child) {
     border-radius: 0;
-    padding-left: 8px;
-    padding-right: 8px;
+    padding-left: (0.8 * @unit);
+    padding-right: (0.8 * @unit);
   }
 
   > .@{btnClassName}:first-child {
@@ -260,14 +260,14 @@
     &:not(:last-child) {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
-      padding-right: 8px;
+      padding-right: (0.8 * @unit);
     }
   }
 
   > .@{btnClassName}:last-child:not(:first-child) {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    padding-left: 8px;
+    padding-left: (0.8 * @unit);
   }
 
   & > & {
@@ -282,13 +282,13 @@
     > .@{btnClassName}:last-child {
       border-bottom-right-radius: 0;
       border-top-right-radius: 0;
-      padding-right: 8px;
+      padding-right: (0.8 * @unit);
     }
   }
 
   & > &:last-child:not(:first-child) > .@{btnClassName}:first-child {
     border-bottom-left-radius: 0;
     border-top-left-radius: 0;
-    padding-left: 8px;
+    padding-left: (0.8 * @unit);
   }
 }

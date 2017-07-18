@@ -27,7 +27,7 @@
     display: inline-block;
     width: 100%;
     background-color: @progress-remaining-color;
-    border-radius: 100px;
+    border-radius: (10 * @unit);
     vertical-align: middle;
   }
 
@@ -40,7 +40,7 @@
   }
 
   &-bg {
-    border-radius: 100px;
+    border-radius: (10 * @unit);
     background-color: @process-default-color;
     transition: all .4s @ease-out-circ 0s;
     position: relative;
@@ -68,7 +68,7 @@
       right: 0;
       bottom: 0;
       background: @component-background;
-      border-radius: 10px;
+      border-radius: (1 * @unit);
       animation: ~"@{ant-prefix}-progress-active" 2.4s @ease-out-quint infinite;
     }
   }

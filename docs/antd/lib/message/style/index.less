@@ -7,20 +7,20 @@
   position: fixed;
   z-index: @zindex-message;
   width: 100%;
-  top: 16px;
+  top: (1.6 * @unit);
   left: 0;
   pointer-events: none;
 
   &-notice {
-    padding: 8px;
+    padding: (0.8 * @unit);
     text-align: center;
     &:first-child {
-      margin-top: -8px;
+      margin-top: -(0.8 * @unit);
     }
   }
 
   &-notice-content {
-    padding: 8px 16px;
+    padding: (0.8 * @unit) (1.6 * @unit);
     border-radius: @border-radius-base;
     box-shadow: @shadow-2;
     background: @component-background;
@@ -46,9 +46,9 @@
   }
 
   .@{iconfont-css-prefix} {
-    margin-right: 8px;
+    margin-right: (0.8 * @unit);
     font-size: @font-size-lg;
-    top: 1px;
+    top: (0.1 * @unit);
     position: relative;
   }
 
@@ -62,8 +62,8 @@
 @keyframes MessageMoveOut {
   0% {
     opacity: 1;
-    max-height: 150px;
-    padding: 8px;
+    max-height: (15 * @unit);
+    padding: (0.8 * @unit);
   }
   100% {
     opacity: 0;
